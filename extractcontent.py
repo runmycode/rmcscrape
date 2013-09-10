@@ -10,6 +10,21 @@ from bs4 import BeautifulSoup
 Read site.do\?siteId\=N files resulting from wget and extract out a dictionary suitable
 for importing as a fixture
 
+json dict is as follows
+
+title: string
+abstract: string
+journal: string
+explanatory_text: string
+names: list of strings
+codrs: list of strings
+legacy_id: integer id from legacy site
+
+
+
+Observations on where metadata exists in the files
+--------------------------------------------------
+
 Article titles are in the <title> element
 
 Authors are in <div id='author-names'><span>author1</span><span>author2</span></div> 
