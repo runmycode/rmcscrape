@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from collections import defaultdict
 import argparse
 import json
@@ -138,8 +140,14 @@ def get_explanatory_text(soup):
     
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='snarf files from wget results and extract info')
-    parser.add_argument('files', metavar='N', nargs='+')
+    parser = argparse.ArgumentParser(description="""
+
+    Read site.do\?siteId\=N CompanionSite files resulting from a wget of the old site
+    and extract out a json results file of CompanionSite metadata.
+
+
+    """)
+    parser.add_argument('files', metavar='N', nargs='+', help='a list of files to scrape.')
     args = parser.parse_args()
     datalist = []
     for f in args.files:
