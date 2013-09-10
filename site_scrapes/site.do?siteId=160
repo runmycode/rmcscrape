@@ -1,0 +1,1834 @@
+HTTP/1.1 200 OK
+Date: Wed, 26 Jun 2013 18:39:18 GMT
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=utf-8
+Vary: Accept-Encoding
+Keep-Alive: timeout=5, max=8
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+		
+	
+		<title>Dendrodendritic Inhibition and Simulated Odor Responses in a Detailed Olfactory Bulb Network Model</title>
+		<meta http-equiv="description" content="This is a model of the mammalian olfactory bulb for the
+NEURON simulator. The model contains only mitral and
+granule cells.
+
+It is intended that the properties of the network can be
+explored by changing the files parameters_<xxx>.hoc and
+experiment_<xxx>.hoc. It should not be necessary to change
+the other files.
+
+After compiling the mod files, start the simulation by
+running init.hoc  Type show_results() if after running the
+odour stimulus simulation the mitral cell spike time
+histogram graph is empty." />
+	
+	
+	<meta http-equiv="keywords" content="runmycode, run my code, runmycode.fr, www.runmycode.fr, runmycode.eu, www.runmycode.eu, runmycode.com, www.runmycode.com, runmycode.org, www.runmycode.org" />
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery/jquery-ui-1.8.9.custom.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/jquery/jquery.tipsy.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/jquery/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/template.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/table.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/companion-site.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
+	
+	<script type="text/javascript" src="js/jquery/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.9.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.fieldcontrol.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>  
+	<script type="text/javascript" src="js/modules/exporting.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.slides.js"></script>
+	<script type="text/javascript" src="js/table.js"></script>
+	<script type="text/javascript" src="js/default.js"></script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a[rel^='abstract']").prettyPhoto({
+				animation_speed: 'fast', /* fast/slow/normal */
+				slideshow: false, /* false OR interval time in ms */
+				autoplay_slideshow: false, /* true/false */
+				opacity: 0.50, /* Value between 0 and 1 */
+				show_title: true, /* true/false */
+				allow_resize: true, /* Resize the photos bigger than viewport. true/false */
+				default_width: 350,
+				default_height: 465,
+				counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+				theme: 'run_my_code', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+				modal: false, /* If set to true, only the close button will close the window */
+				overlay_gallery: false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+				keyboard_shortcuts: false /* Set to false if you open forms inside prettyPhoto */
+			});		
+		});
+		
+		
+			// Google analytics
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-28089959-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		
+	</script>
+
+</head>
+
+<body>
+
+	<div align="center" style="width: 100%; height: 100%;">
+	
+		<div id="page">
+		
+			<div id="header">
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		// Fenetre de login
+		$('#button-login').click(
+			function() {
+				
+				
+				
+					var url = 'member.do?action=login';
+				
+				
+				$.get(
+					url,
+					function(data) {
+						$('#dialog-login').dialog('destroy');
+						$('#dialog-login').html(data);
+						$('#dialog-login').dialog({minWidth: 360}, {title: 'Already member? Sign in'}, {resizable: false}, {draggable: false}, {modal: true});
+					}
+				);
+				return false;
+			}	
+		);
+		
+		// Effacement de la fenetre de recherche au click
+		$("#search-input").click(function() {
+			if(this.value=='Search here ...') {
+				this.value='';
+			}
+		});
+		
+		// Lancement de la recherche
+		$("#search-button").click(function() {
+			window.location = 'searches.do?search=true&keywords=' + $('#search-input').val();
+		});	
+		
+		// Raccourci (touche "enter") pour la recherche quand le curseur est place dans l'input "search-input"
+		$('#search-input').bind('keypress', function(e) {
+	        if(e.keyCode == 13 && this.value != 'Search here ...'){
+	        	$('#search-button').click();
+	        }
+		});
+		
+		// Redirection vers le portail au click sur le logo
+		$('#logo-run-my-code').click(function() {
+			window.location = 'home.do';
+		});
+		
+	});
+</script>
+
+<div id="background-header">
+
+	<div id="logo-run-my-code"></div>
+	
+	<div id="div-login">
+
+		
+
+		
+			<a href="http://www.runmycode.org/MetaSite/account.do" id="button-register">Register</a> 
+			<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			<a href="#" id="button-login">Sign In</a>
+			<div id="dialog-login">&nbsp;</div>
+		
+
+	</div>
+
+	<div id="div-search-header">
+		<div id="search-button" style="margin-right: 1px;">
+			Search
+		</div>
+		<div id="search-value">
+			<input id="search-input" type="text" value="Search here ..."/>
+		</div>
+	</div>
+	
+</div></div>
+			
+			<div id="main-content">
+				<div id="menu">
+
+
+
+<script type="text/javascript">
+	
+	var computingQueueSiteDisplay = false;
+	
+	function checkConnexion(){
+		$.ajax({
+	    	url : 'member.do?action=check-connexion',	
+	    	type : "POST", 
+	    	dataType : "json" , 
+	    	success: function(data) {
+				if(data != "OK"){
+					document.location.href = 'http://www.runmycode.org/CompanionSite//index.jsp';
+				}else{
+					setTimeout(function(){checkConnexion();}, 60000);
+				}
+	    	}
+	    });
+	}
+	
+	$(document).ready(function(){
+		
+		
+		
+			
+			
+			
+				
+					
+				
+			
+			
+		
+		
+		
+		
+	});
+	
+	function refreshAnonymousSite(){
+		$.ajax({
+	    	url : "task.do?action=list-current-task",	
+	    	type : "POST", 
+	    	dataType : "json" , 
+	    	success: function(data) {
+				var tbody = "";
+				var tr = 0;
+				
+				$.each(data[0].results, function(index, result) {
+				
+					
+						
+					
+
+				});
+				
+				$.each(data[0].queue, function(index, calcul) {
+	
+					
+						
+					
+			
+				});
+				
+				if(tbody != ""){
+					$("#site-computing-queue-tbody").html(tbody);
+					if(!computingQueueSiteDisplay){
+						$("#site-computing-queue-li").show();
+						computingQueueSiteDisplay = true;
+					}
+				}else{
+					if(computingQueueSiteDisplay){
+						$("#site-computing-queue-li").hide();
+						computingQueueSiteDisplay = false;
+					}
+				}
+				
+				
+				
+				setTimeout(function(){refreshAnonymousSite();}, 5000);
+	    	}
+	    });	
+	}
+
+	function refreshQueue() {
+	    $.ajax({
+	    	url : "task.do?action=list-current-task",	
+	    	type : "POST", 
+	    	dataType : "json" , 
+	    	success: function(data) {
+				var divPastResults = "";
+				var divComputingQueue = "";
+				var tbody = "";
+				var tr = 0;
+				
+				$.each(data[0].results, function(index, result) {
+					
+					$('#results').html('Past results');
+					
+					
+					
+						
+							if(result.site == '160'  && !result.anonymous) {
+								if(tr%2 == 0) tbody += '<tr class="even">';
+								else tbody += '<tr class="odd">';
+								tbody += '<td>' + result.begin + '</td>';
+								tbody += '<td>Computation completed</td>';
+								tbody += '<td><a href="site.do?siteId=' + result.site + '&amp;task=' + result.id + '"><img src="img/button-cs-view.jpg" alt="view"></a></td>';
+								tbody += '</tr>';
+								tr++;
+							}
+						
+						
+						
+						
+						
+						
+					
+					
+					
+				});
+				
+				$.each(data[0].queue, function(index, calcul) {
+					
+					
+					
+						
+							if(calcul.site == '160' && !calcul.anonymous) {
+								if(tr%2 == 0) tbody += '<tr class="even">';
+								else tbody += '<tr class="odd">';
+								tbody += '<td>' + calcul.begin + '</td>';
+								tbody += '<td>Computation in process</td>';
+								tbody += '<td></a></td>';
+								tbody += '</tr>';
+								tr++;
+							}
+						
+						
+						
+							
+					
+					
+					if(!calcul.anonymous){
+						divComputingQueue += '<a class="link" href="site.do?siteId=' + calcul.site + '">' + calcul.task + '</a><br>';
+					}else{
+						divComputingQueue += '<a class="link" href="Blind73' + calcul.site + '5">' + calcul.task + '</a><br>';
+					}
+					
+				});
+				
+				$("#computing-queue").html(divComputingQueue);
+				
+				if(tbody != ""){
+					$("#site-computing-queue-tbody").html(tbody);
+					if(!computingQueueSiteDisplay){
+						$("#site-computing-queue-li").show();
+						computingQueueSiteDisplay = true;
+					}
+				}else{
+					if(computingQueueSiteDisplay){
+						$("#site-computing-queue-li").hide();
+						computingQueueSiteDisplay = false;
+					}
+				}
+				
+				setTimeout(function(){refreshQueue();}, 5000);
+	    	}
+	    });
+	}
+
+</script>
+
+<ul class="border">
+	<li><a class="link" href="home.do">Home</a></li>
+	<li><a class="link" href="firstVisit.do">First visit?</a></li>
+	<li><a class="link" href="offering.do">Our offering</a></li>
+	<li><a class="link" href="submitYourCode.do">Submit your code</a></li>
+</ul>
+	
+<ul class="border">
+	<li><a class="link" href="searches.do?action=search-by-themes">Search by themes</a></li>
+  	<li><a class="link" href="searches.do?action=advanced-search">Advanced search</a></li>
+</ul>
+
+<ul>
+  	<li><a class="link" href="faq.do">Help/FAQ</a></li>
+  	<li><a class="link" href="partner.do">Our partners</a></li>
+  	<li><a class="link" href="team.do">The team</a></li>
+  	<li><a class="link" href="contact-us.do">Contact us</a></li>
+</ul>
+
+
+
+	
+
+<div class="clear"></div>
+</div>
+				
+
+
+
+
+
+<script type="text/javascript">
+
+	var confirm_add_in_selection = false;
+	
+	function addInSelection(action) {
+		var url = "ajaxAddInSelection.do";
+		var type =  "POST";
+		var params = {};
+		
+		params['siteId'] = 160;
+		params['isFavoris'] = "true";
+		params['action'] = action;
+		
+		var displaySuccess = function() {
+			$("#add-in-selection").hide();
+		};
+		
+		$.ajax({url : url ,	
+			type : type ,
+	    	data : params ,  
+	    	success: displaySuccess 
+	    });
+	}
+	
+	function notAddInSelection(action) {
+		var url = "ajaxAddInSelection.do";
+		var type =  "POST";
+		var params = {};
+		
+		params['siteId'] = 160;
+		params['isFavoris'] = "false";
+		params['typeAction'] = action;
+		
+		var displaySuccess = function() {
+			$("#add-in-selection").hide();
+		};
+		
+		$.ajax({
+			url : url,	
+			type : type,
+	    	data : params,  
+	    	success: displaySuccess 
+	    });
+	}
+	
+	function registerAction(action) {
+		var url = "ajaxAddInSelection.do";
+		var type =  "POST";
+		var params = {};
+		
+		params['siteId'] = 160;
+		params['typeAction'] = action;
+		
+		$.ajax({url : url, type : type, data : params});
+	}
+	
+	function confirmAddInSelection(action){
+		
+	}
+
+	$(document).ready(function() {
+		
+		$("#companion-site-tabs").tabs();
+		$("#cs-tab-bottom").tabs();
+		$("#cs-tab-bottom").tabs('disable',3);
+		displayEtatAvancement(1);
+	
+		$('#add-in-selection').unbind("click");
+		$('#add-in-selection').click(function() {
+			var url = "ajaxAddInSelection.do";
+			var type =  "POST";
+			var params = {};
+			params['siteId'] = 160;
+			params['isFavoris'] = "true";
+			
+			var displaySuccess = function() {
+				$("#add-in-selection").hide();
+				alertez('This site has been successfully added in your selection.');
+			};
+			var displayError = function() {
+				alertez('An error occured when trying to add this site in your selection.');
+			};
+			$.ajax({url : url ,	
+				type : type ,
+		    	data : params ,  
+		    	success: displaySuccess , 
+		    	error : displayError 
+		    });
+		});
+		
+		$('#follow-update').unbind("click");
+		$('#follow-update').click(function() {
+			var url = "ajaxAddInSelection.do";
+			var type =  "POST";
+			var params = {};
+			params['siteId'] = 160;
+			params['isFollow'] = "true";
+			
+			var displaySuccess = function() {
+				$("#follow-update").hide();
+				alertez('');
+			};
+			var displayError = function() {
+				alertez('');
+			};
+			$.ajax({url : url ,	
+				type : type ,
+		    	data : params ,  
+		    	success: displaySuccess , 
+		    	error : displayError 
+		    });
+		});
+	
+	});
+
+</script>
+
+<div id="companion-site-tabs">
+
+
+	
+
+	<ul>
+		<li><a class="tab-link" href="#cs-tab"><span>Companion site</span> </a></li>
+		
+			<li><a class="tab-link" href="#coders-tab"><span>Coders</span></a></li>
+			<li><a class="tab-link" href="#similar-site-tab"><span>Similar sites</span> </a></li>
+			<li><a class="tab-link" href="#faq-tab"><span>FAQ</span> </a></li>
+				
+	</ul>
+	
+	<div class="grey-line"></div>
+	
+	<div id="cs-tab">
+		<div id="cs-tab-top">
+			
+
+
+
+
+
+ 
+
+<script>
+
+	function downloadData(){
+		confirmAddInSelection(DOWNLOAD_DEMO_DATA);
+		_gaq.push(['_trackPageview', '/companionSite160/data/data.zip']);
+	}
+	
+	function downloadScript(){
+		confirmAddInSelection(DOWNLOAD_CODE);
+		_gaq.push(['_trackPageview', '/companionSite160/script/script.zip']);
+	}
+	
+	$(function(){
+		$('#slides').slides({
+			play: 10000,
+			pause: 2500,
+			hoverPause: true,
+			slideSpeed: 1000,
+			generatePagination: false,
+			autoHeight: true
+		});
+	});
+	
+</script>
+ 
+<div id="top-infos">
+
+	<div id="site-name">
+		
+		Dendrodendritic Inhibition and Simulated Odor Responses in a Detailed Olfactory Bulb Network Model
+	</div>
+	
+	
+	
+		<div id="author-names">
+			By 
+			
+				
+			
+				<span>
+					Andrew
+					
+					
+					Davison</span>,
+					
+			
+				
+			
+				<span>
+					Jianfeng
+					
+					
+					Feng</span>,
+					and
+			
+				
+			
+				<span>
+					David
+					
+					
+					Brown</span>
+					
+			
+		</div>
+		
+		<div id="journal">
+			<span>
+				
+					Journal of Neurophysiology
+				
+					
+				(2003)
+			</span>
+			<a href="#abstract-paper-160" rel="abstractPaper160" class="link">Abstract</a> 
+			<a href="http://jn.physiology.org/content/90/3/1921" target="_blank" class="link">Paper</a> 
+			
+		</div>
+	
+	
+	
+	<div class="grey-line-h7"></div>
+	
+</div>
+
+<div id="left-infos">
+	<div id="description">
+	
+		
+	
+			
+				<div id="top-description">
+					<span>Coder:</span>
+				</div>
+				<div class="separate-horizontal-coders"></div>
+				<div id="middle-description"">
+					
+						
+					
+						<div class="slide">
+							
+								
+									<img class="picture" height="100" width="80" src="/data/MetaSite/upload/adavison/b651aaebddff5aec985ff7283a3cd63a68b1cee4.jpg">
+								
+								
+							
+							<p class="name">
+								Andrew&nbsp;
+								
+								Davison
+							</p>
+							<p class="affiliation">
+								UNIC, CNRS UPR 3293
+							</p>
+							<p class="country">
+								France
+							</p>
+							<p>
+								<a class="link float-left" href="coders.do?action=infos&id=460">
+									Coder Page &nbsp;
+								</a> 
+								<img src="images/icones/smallLogoRMC.png" height="15px" width="15px">						
+							</p>
+						</div>
+					
+				</div>
+				<div class="separate-horizontal-coders"></div>
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		
+	</div> <!-- end description -->
+	
+	
+	
+		<div id="details">
+			<p>
+				
+					
+						
+							<span>66</span>
+						
+						
+					
+				
+				Visits
+				
+				
+					
+						
+						
+					
+				
+			</p>
+			
+			
+			
+			
+				
+					<p>
+						
+							
+								
+									<span>9</span>
+								
+								
+							
+						
+						Code downloads
+						
+						
+							
+								
+								
+							
+						
+					</p>
+				
+				
+				
+			
+			<!-- 
+			
+			 -->
+			
+			<p>
+				Ranking
+				
+				
+					
+						
+							<span>22</span>
+						
+						
+					
+				
+			</p>
+			
+			<div style="margin-top: 15px;">
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+				<!-- a class="addthis_counter addthis_pill_style"></a -->
+				</div>
+				<script type="text/javascript">
+					var addthis_config = {
+						ui_language: "en"
+					};
+				</script>
+				<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f86e04f4d34fb93"></script>
+				<!-- AddThis Button END -->
+			</div>
+			
+		</div> <!-- end details -->
+		
+	
+
+</div>
+
+<div id="right-infos">
+
+	<div id="resume-code" class="cadre">
+		<div id="top-resume-code">
+			This is a model of the mammalian olfactory bulb for the
+NEURON simulator. The model contains only mitral and
+granule cells.
+
+It is intended that the properties of the network can be
+explored by changing the files parameters_&lt;xxx&gt;.hoc and
+experiment_&lt;xxx&gt;.hoc. It should not be necessary to change
+the other files.
+
+After compiling the mod files, start the simulation by
+running init.hoc  Type show_results() if after running the
+odour stimulus simulation the mitral cell spike time
+histogram graph is empty.
+		</div>
+		<div>
+			
+		</div>
+	</div>
+	
+	<div id="infos-code" class="cadre">
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 80px;"/>
+						<th style="width: 100px;"/>
+					</tr>
+				<tbody>
+					<tr>
+						<td>Created</td>
+						<td class="weak-grey">August 09, 2012</td>
+					</tr>
+					
+					<tr>
+						<td>Last update</td>
+						<td class="weak-grey"">October 08, 2012</td>
+					</tr>
+					
+					
+						<tr>
+							<td>Software</td>
+							<td class="weak-grey"">
+								
+								Neuron 7.1
+							</td>
+						</tr>
+					
+					
+				</tbody>
+			</table>
+		</div>
+		
+		
+		
+			<div class="download" style="margin:5px 0 0 0;">
+				<a
+					href="/data/MetaSite/upload/companionSite
+					160/script/script.zip"	onClick="javascript:downloadScript();">
+					<img src="images/icones/arrowDownload.png">
+						<span>Code download</span>
+				</a>
+			</div>
+			<div class="download" style="margin:5px 0 0 0;">
+					
+			</div>
+
+			
+		
+		
+		
+		
+	</div>
+	
+</div>		
+<div style="clear: both;"></div>
+
+<!-- Abstract publication -->
+<div id="abstract-paper-160" class="abstract-paper">
+
+	<div class="top-abstract-paper">
+		<div class="top-left-abstract-paper">Abstract</div>
+		<div class="top-right-abstract-paper">Close</div>
+	</div>
+	
+	<div class="abstract-separate-line"></div>
+	
+	<div class="middle-abstract-paper">
+		<!-- description du site -->
+		In the olfactory bulb, both the spatial distribution and the temporal structure of neuronal activity appear to be important for processing odor information, but it is currently impossible to measure both of these simultaneously with high resolution and in all layers of the bulb. We have developed a biologically realistic model of the mammalian olfactory bulb, incorporating the mitral and granule cells and the dendrodendritic synapses between them, which allows us to observe the network behavior in detail. The cell models were based on previously published work. The attributes of the synapses were obtained from the literature. The pattern of synaptic connections was based on the limited experimental data in the literature on the statistics of connections between neurons in the bulb. The results of simulation experiments with electrical stimulation agree closely in most details with published experimental data. This gives confidence that the model is capturing features of network interactions in the real olfactory bulb. The model predicts that the time course of dendrodendritic inhibition is dependent on the network connectivity as well as on the intrinsic parameters of the synapses. In response to simulated odor stimulation, strongly activated mitral cells tend to suppress neighboring cells, the mitral cells readily synchronize their firing, and increasing the stimulus intensity increases the degree of synchronization. Preliminary experiments suggest that slow temporal changes in the degree of synchronization are more useful in distinguishing between very similar odorants than is the spatial distribution of mean firing rate.
+	</div>
+	
+	<div class="abstract-separate-line"></div>
+	
+	<div class="bottom-abstract-paper">
+		
+			
+		
+			
+				
+				
+					Davison,
+					
+					A.,
+				
+				
+				
+			
+		
+			
+		
+			
+				
+				
+				
+				
+					J.
+					
+					Feng,
+				
+			
+		
+			
+		
+			
+				
+				
+				
+					and
+					D.
+					
+					Brown,
+				
+				
+			
+		
+		"Dendrodendritic Inhibition and Simulated Odor Responses in a Detailed Olfactory Bulb Network Model",
+		
+			
+			
+				<i>Journal of Neurophysiology</i>
+				, 90, 1921-1935.
+				<br/>
+			
+			
+			
+		
+		
+		<div>
+			<a class="link" target="_blank" href="http://jn.physiology.org/content/90/3/1921">Access to full paper</a>
+		</div>
+		
+	</div>
+	
+</div>		
+
+		</div>
+		
+		
+	</div>
+	
+	
+		<div id="coders-tab">
+			
+
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		
+			
+		
+			$('#table-coder-460').dataTable({
+				"sPaginationType": "full_numbers",
+				"aaSorting": [[ 0, "asc" ]],
+				"sDom": '<"top"i>rt<"clear">',
+				"oLanguage" : {
+					"sEmptyTable": "No data available"
+				},
+				"bAutoWidth": false,
+				"aaSorting": [[ 0, "asc" ]],
+				"aoColumnDefs": [
+						{sType: "string", "sWidth": "250px", "aTargets": [0]},
+						{sType: "string", "sWidth": "100px","aTargets": [1]},
+						{sType: "string", "sWidth": "100px","aTargets": [2]},
+						{sType: "date", "aTargets": [3]},
+						{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+						{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+						{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+					],
+				"bFilter" : false,
+				// select number of rows in table
+				"aLengthMenu" : [5, 10, 15, 20]
+			});
+		
+			
+		init();
+		
+		//Evenement en cliquant sur l icone suivant
+		$(".suivant").click( function() {
+			
+			if ($(".coder").length > 5) {
+				var initPositionUL = 280;
+				var nextPositionLeft = "";
+				if ($(".selected-picture").html() != $(".coder").last().html()) {
+					nextPositionLeft = ($("#carrousel > ul").position().left - 140);
+				} else {
+					nextPositionLeft = initPositionUL;
+				}
+				$("#carrousel").children().css({left:nextPositionLeft});
+			}
+			
+			var nextElement ="";
+			// Recherche de l element frere
+			if ($(".selected-picture").html() != $(".coder").last().html()) {
+				nextElement = $(".selected-picture").parent().next("li").children();
+			} else {
+				nextElement =  $(".coder").first();
+			}
+			$(".selected-picture > div").last().css({display:"none"});
+			$(".coder").removeClass("selected-picture");
+			nextElement.addClass("selected-picture");
+			$(".selected-picture > div").last().css({display:"block"});
+			$(".memberTable").css({display:"none"});
+			$("#" + nextElement.attr("id")+"Table").css({display:"block"});
+			
+		});
+		
+		//Evenement en cliquant sur l icone precedent
+		$(".precedent").click( function() {
+			
+			if ($(".coder").length > 5) {
+				var initPositionUL = 280;
+				var nextPositionLeft = "";
+				if ($(".selected-picture").html() != $(".coder").first().html()) {
+					nextPositionLeft = $("#carrousel > ul").position().left + 140;
+				} else {
+					nextPositionLeft = initPositionUL - (140)*($(".coder").length-1);
+				}
+	
+				$("#carrousel > ul").css({left:nextPositionLeft});
+			}
+			var prevElement ="";
+			// Recherche de l element frere
+			if ($(".selected-picture").html() != $(".coder").first().html()) {
+				prevElement = $(".selected-picture").parent().prev("li").children();
+			} else {
+				prevElement =  $(".coder").last();
+			}
+			$(".selected-picture > div").last().css({display:"none"});
+			$(".coder").removeClass("selected-picture");
+			prevElement.addClass("selected-picture");
+			$(".selected-picture > div").last().css({display:"block"});
+			$(".memberTable").css({display:"none"});
+			$("#" + prevElement.attr("id")+"Table").css({display:"block"});
+			
+		});
+		
+		//Evenement en cliquant sur la photo d un coder
+		$(".coder").click( function() { 
+			if ($(".coder").length > 5) {
+				var initPositionUL = 280;
+				var nextPositionLeft = "";
+				nextPositionLeft = initPositionUL - $(".coder").index(this)*140 + "px";
+				$("#carrousel > ul").css({left:nextPositionLeft});
+			}
+			
+			$(".selected-picture > div").last().css({display:"none"});
+			$(".coder").removeClass("selected-picture");
+			$(this).addClass("selected-picture");
+			$(".selected-picture > div").last().css({display:"block"});
+			$(".memberTable").css({display:"none"});
+			$("#" + $(this).attr("id")+"Table").css({display:"block"});
+			
+		} );
+	});
+
+	function init() { 
+		
+		// initialisation carrousel
+		$("#carrousel").css({postion:"relative"});
+		
+		// Effacement de tous les tableaux
+		$(".memberTable").css({display:"none"});
+		
+		// Selection du coder (le troisieme par defaut si plus de 5 coders)
+		var selectedElement = "";
+		if ($(".coder").length < 5) {
+			if ($(".coder").length % 2 === 0) {
+				selectedElement = $(".coder").get($(".coder").length/2 -1);
+			} else {
+				selectedElement = $(".coder").get(($(".coder").length-1)/2);
+			}
+		} else {
+				selectedElement = $(".coder").get(2);
+		}
+		$("#" + selectedElement.id).addClass("selected-picture");
+	 	$("#" + selectedElement.id + "Table").css({display:"block"});
+		$(".selected-picture > div").last().css({display:"block"});
+		
+		// Centrage du ul par rapport à la div en calculant la taille + ajout d une marge
+		if ($(".coder").length < 5) {
+			var ulSize = ($(".coder").parent().width())*5;
+			$("#carrousel").children("ul").css({width:ulSize});
+			var marginLeft = (($(".coder").parent().width())*5-$(".coder").length*140)/($(".coder").length+1);
+			$("#carrousel").children("ul").children("li").css({marginLeft:marginLeft});
+		} else {
+			$("#carrousel").css({position:"relative"});
+			$("#carrousel").children("ul").css({position:"relative"});
+		}
+	
+	}
+</script>
+
+
+	<div id="top-carrousel">
+		<div class="float-left">
+			Coder:
+		</div>
+		<div class="suivant"><img src="images/buttons/arrowButtonRightOn.gif"/></div>
+		<div class="precedent"><img src="images/buttons/arrowButtonLeftOn.gif"/></div>
+	</div>
+
+
+
+
+<div id="wrapper-carrousel">
+	<div id="carrousel">
+		<ul>
+			
+				
+				
+				<li>
+					<div id="Davison" class="coder">
+						
+							
+								<img class="picture" src="/data/MetaSite/upload/adavison/b651aaebddff5aec985ff7283a3cd63a68b1cee4.jpg">
+							
+							
+						
+						<div class="content-carrousel">
+							<p class="name">
+								Andrew
+								 
+								Davison 
+							</p>
+							<p class="affiliation">
+								UNIC, CNRS UPR 3293
+								
+							</p>
+							<p class="country">
+								France
+							</p>
+						</div>
+						<div class="link-carrousel" style="display: none;">
+							<a class="link" href="coders.do?action=infos&id=460">
+								Coder Page
+							</a> 
+							<img src="images/icones/smallLogoRMC.png" height="14px" width="15px">
+						</div>
+					</div>
+				</li>
+			
+		</ul>
+	</div>
+</div>
+<div id="bottom-carrousel"></div>
+
+	
+
+	<div id="DavisonTable" class="memberTable">
+		<div class="table-title-black">
+			<p>
+				Andrew
+				
+				Davison
+				also created these companion sites
+			</p>
+		</div>
+		<table id="table-coder-460" class="table">
+			<thead>
+				<tr>
+					<th style="text-align: center;">Article</th>
+					<th>Authors</th>
+					<th>Coders</th>
+					<th style="text-align: center;">Last update</th>
+					<th style="text-align: center;">Ranking</th>
+					<th style="text-align: center;">Visits</th>
+					<th style="text-align: center;">Runs</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					
+				
+					
+				
+			</tbody>
+		</table>
+	</div>
+
+		</div>
+		<div id="similar-site-tab">
+			
+
+
+
+
+<script>
+$(document).ready(function(){
+
+	$('#table-relative-on-same-paper').dataTable({
+		"sPaginationType": "full_numbers",
+		"aaSorting": [[ 0, "asc" ]],
+		"sDom": '<"top"i>rt<"clear">',
+		oLanguage : {
+			"sEmptyTable": "No data available"
+		},
+		"bAutoWidth": false,
+		"aaSorting": [[ 0, "asc" ]],
+		"aoColumnDefs": [ // taille des colonnes
+                {sType: "string", "sWidth": "250px", "aTargets": [0]},
+				{sType: "string", "sWidth": "100px","aTargets": [1]},
+				{sType: "string", "sWidth": "100px","aTargets": [2]},
+				{sType: "date", "aTargets": [3]},
+				{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+				{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+				{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+			],
+		bFilter : false,
+		// select number of rows in table
+		aLengthMenu : [5, 10, 15, 20]
+	});
+	
+	$('#table-relative-to-similar-paper').dataTable({
+		"sPaginationType": "full_numbers",
+		"aaSorting": [[ 0, "asc" ]],
+		"sDom": '<"top"i>rt<"clear">',
+		oLanguage : {
+			"sEmptyTable": "No data available"
+		},
+		"bAutoWidth": false,
+		"aaSorting": [[ 0, "asc" ]],
+		"aoColumnDefs": [
+				{sType: "string", "sWidth": "250px", "aTargets": [0]},
+				{sType: "string", "sWidth": "100px","aTargets": [1]},
+				{sType: "string", "sWidth": "100px","aTargets": [2]},
+				{sType: "date", "aTargets": [3]},
+				{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+				{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+				{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+			],
+		bFilter : false,
+		// select number of rows in table
+		aLengthMenu : [5, 10, 15, 20]
+	});
+	
+});
+</script>
+
+<div class="table-title-black" >
+	<p>Other Companion Sites on same paper</p>
+</div>
+<div style="margin-bottom: 20px;">
+	<table id="table-relative-on-same-paper" class="table">
+		<caption>
+			Dendrodendritic Inhibition and Simulated Odor Responses in a Detailed Olfactory Bulb Network Model
+		</caption>
+		<thead>
+			<tr>
+				<th style="text-align: center;">Article</th>
+				<th>Authors</th>
+				<th>Coders</th>
+				<th style="text-align: center;">Last update</th>
+				<th style="text-align: center;">Ranking</th>
+				<th style="text-align: center;">Visits</th>
+				<th style="text-align: center;">Runs</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			
+				
+			
+
+		</tbody>
+	</table>
+</div>
+<div class="table-title-black">
+	<p>Other Companion Sites relative to similar papers</p>
+</div>
+<div>
+	<table id="table-relative-to-similar-paper" class="table">
+		<thead>
+			<tr>
+				<th style="text-align: center;">Article</th>
+				<th>Authors</th>
+				<th>Coders</th>
+				<th style="text-align: center;">Last update</th>
+				<th style="text-align: center;">Ranking</th>
+				<th style="text-align: center;">Visits</th>
+				<th style="text-align: center;">Runs</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			
+				
+					<tr>
+						<td>
+							<div style="width: 230px; float: left; position: relative;">
+								<a href="site.do?siteId=23">Bartlett&#039;s Formula for a General Class of Non Linear Processes</a><br/>
+								<div class="loupe">
+									<a href="#abstractPaper-23" rel="abstractPaper23" title="Details of the article">
+										<img alt="" src="images/icones/loupe.gif" />
+									</a>
+									<!-- Abstract publication -->
+									<div id="abstractPaper-23" class="abstract-paper">
+										<div class="top-abstract-paper">
+											<div class="top-left-abstract-paper">Abstract</div>
+											<div class="top-right-abstract-paper">Close</div>
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="middle-abstract-paper">
+											<!-- description du site -->
+											A Bartlett-type formula is proposed for the asymptotic distribution of the sample autocorrelations of nonlinear processes. The asymptotic covariances between sample autocorrelations are expressed as the sum of two terms. The first term corresponds to the standard Bartlett&#039;s formula for linear processes, involving only the autocorrelation function of the observed process. The second term, which is specific to nonlinear processes, involves the autocorrelation function of the observed process, the kurtosis of the linear innovation process and the autocorrelation function of its square. This formula is obtained under a symmetry assumption on the linear innovation process. It is illustrated on ARMA–GARCH models and compared to the standard formula. An empirical application on financial time series is proposed.
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="bottom-abstract-paper">
+											
+												
+											
+												
+													
+													
+														Francq,
+														
+														C.,
+													
+													
+													
+												
+											
+												
+											
+												
+													
+													
+													
+														and
+														J.
+														
+														Zakoian,
+													
+													
+												
+											
+											"Bartlett&#039;s Formula for a General Class of Non Linear Processes",
+											
+												
+												
+													<i>Journal of Time Series Analysis</i>, 30, 449-465.
+													<br/>
+												
+												
+												
+											
+											<div>
+												<a class="link" target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1423152">Access to full paper</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td>
+							
+								
+								Francq<br/>
+							
+								
+								Zakoian<br/>
+							
+						</td>
+						
+						<td>
+							
+								
+								Francq<br/>
+							
+								
+								Zakoian<br/>
+							
+						</td>
+						<td class="td-center-grey">07/23/2012</td>
+						
+						<td class="td-center-grey">
+							
+							
+								
+									
+										<span>8</span>
+									
+									
+								
+							
+						</td>
+						
+						<td class="td-center-grey">
+							
+								
+									
+										<span>522</span>
+									
+									
+								
+							
+
+							
+							
+								
+									
+									
+								
+							
+						</td>
+
+						<td class="td-center-grey">
+							
+		
+							
+								
+									
+										<span>115</span>
+									
+									
+								
+							
+						</td>
+						
+					</tr>
+				
+			
+				
+			
+				
+					<tr>
+						<td>
+							<div style="width: 230px; float: left; position: relative;">
+								<a href="site.do?siteId=194">Kinematics of the ribbon fin in hovering and swimming of the electric ghost knifefish</a><br/>
+								<div class="loupe">
+									<a href="#abstractPaper-194" rel="abstractPaper194" title="Details of the article">
+										<img alt="" src="images/icones/loupe.gif" />
+									</a>
+									<!-- Abstract publication -->
+									<div id="abstractPaper-194" class="abstract-paper">
+										<div class="top-abstract-paper">
+											<div class="top-left-abstract-paper">Abstract</div>
+											<div class="top-right-abstract-paper">Close</div>
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="middle-abstract-paper">
+											<!-- description du site -->
+											Weakly electric knifefish are exceptionally maneuverable swimmers. In prior work, we have shown that they are able to move their entire body omnidirectionally so that they can rapidly reach prey up to several centimeters away. Consequently, in addition to being a focus of efforts to understand the neural basis of sensory signal processing in vertebrates, knifefish are increasingly the subject of biomechanical analysis to understand the coupling of signal acquisition and biomechanics. Here, we focus on a key subset of the knifefish&#039;s omnidirectional mechanical abilities: hovering in place, and swimming forward at variable speed. Using high-speed video and a markerless motion capture system to capture fin position, we show that hovering is achieved by generating two traveling waves, one from the caudal edge of the fin and one from the rostral edge, moving toward each other. These two traveling waves overlap at a nodal point near the center of the fin, cancelling fore-aft propulsion. During forward swimming at low velocities, the caudal region of the fin continues to have counter-propagating waves, directly retarding forward movement. The gait transition from hovering to forward swimming is accompanied by a shift in the nodal point toward the caudal end of the fin. While frequency varies significantly to increase speed at low velocities, beyond approximately one body length per second, the frequency stays near 10 Hz, and amplitude modulation becomes more prominent. A coupled central pattern generator model is able to reproduce qualitative features of fin motion and suggest hypotheses regarding the fin&#039;s neural control.
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="bottom-abstract-paper">
+											
+												
+											
+												
+													
+													
+														Ruiz-Torres,
+														
+														R.,
+													
+													
+													
+												
+											
+												
+											
+												
+													
+													
+													
+													
+														M.
+														A.
+														MacIver,
+													
+												
+											
+											"Kinematics of the ribbon fin in hovering and swimming of the electric ghost knifefish",
+											
+												
+												
+													<i>Journal of Experimental Biology</i>, 1.
+													<br/>
+												
+												
+												
+											
+											<div>
+												<a class="link" target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/23197089">Access to full paper</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td>
+							
+								
+								Ruiz-Torres<br/>
+							
+								
+								Curet<br/>
+							
+								
+								Lauder<br/>
+							
+								
+								MacIver<br/>
+							
+						</td>
+						
+						<td>
+							
+								
+								Ruiz-Torres<br/>
+							
+								
+								MacIver<br/>
+							
+						</td>
+						<td class="td-center-grey">02/19/2013</td>
+						
+						<td class="td-center-grey">
+							
+							
+								
+									
+										<span>9999</span>
+									
+									
+								
+							
+						</td>
+						
+						<td class="td-center-grey">
+							
+								
+									
+										<span>17</span>
+									
+									
+								
+							
+
+							
+							
+								
+									
+									
+								
+							
+						</td>
+
+						<td class="td-center-grey">
+							
+		
+							
+								
+									
+									<span>N.A.</span>
+								
+							
+						</td>
+						
+					</tr>
+				
+			
+
+		</tbody>
+	</table>
+</div>
+
+
+		</div>
+		<div id="faq-tab">
+			
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#refresh-captcha").unbind("click");
+		$("#refresh-captcha").click(function(){
+			var date = new Date();
+			$("#form-add-faq-captcha-img").attr("src","captcha.do?action=image&time=" + date.getTime());
+			return false;
+		});
+		
+		
+		// initialisation de la partie faq
+		$(".response").css({display:"none"});
+		$(".question").children('img').attr('src','images/icones/more.png');
+		$(".question").children('span').css({color:"#3a3a3a"});
+		
+		// onClick Evenement
+		$(".question").each( function (i) {
+			$(this).bind("click",function(){
+				if ($(this).children('img').attr('src') == 'images/icones/more.png'){
+					$(this).css({borderBottom:"1px solid #dadada"});
+					$(this).children('img').attr('src','images/icones/less.png');
+					$(this).parent('div').children('.response').show();
+					$(this).children('span').css({color:"#46b21e"});
+				} else {
+					$(this).children('img').attr('src','images/icones/more.png');
+					$(this).css({borderBottom:"none"});
+					$(this).parent('div').children('.response').hide();
+					$(this).children('span').css({color:"#3a3a3a"});
+				}
+				}
+			);
+		});
+		
+		//onMouseOver Evenement
+		$(".question").each( function (i) {
+			$(this).hover(function(){
+				if ($(this).children('img').attr('src') == 'images/icones/more.png'){
+					$(this).children('span').css({color:"#46b21e"});
+				}
+				$(this).addClass('hover');
+			},function() {
+				if ($(this).children('img').attr('src') == 'images/icones/more.png'){
+					$(this).children('span').css({color:"#3a3a3a"});
+				}
+				$(this).removeClass('hover');
+			});
+		});	
+		
+		
+		$("#form-add-faq-button-submit").click(
+			function(){
+				if($("#textAreaQuestion").val() == ""){
+
+					$( "#dialog:ui-dialog" ).dialog( "destroy" );
+					
+					$("#dialog").html("Please enter a question.");
+					$("#dialog").dialog({
+						title: "Error",
+						dialogClass: "dialog-error",
+						resizable: false,
+						modal: true,
+						draggable: false,
+						buttons: {
+							"OK": function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					});
+					
+					return false;
+				}
+				
+				if($("#form-add-faq-captcha").val() == ""){
+					$( "#dialog:ui-dialog" ).dialog( "destroy" );
+					
+					$("#dialog").html("Please enter the security code written in the box.");
+					$("#dialog").dialog({
+						title: "Error",
+						dialogClass: "dialog-error",
+						resizable: false,
+						modal: true,
+						draggable: false,
+						buttons: {
+							"OK": function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					});
+					
+					return false;
+				}
+				
+				var ok = true;
+				$.ajax({
+					url: "captcha.do?action=check&captcha=" + $("#form-add-faq-captcha").val(),
+					async: false, 
+					success:
+						function(data){
+							if(data == "NOT-OK") ok = false;
+						}
+				});
+				
+				if(!ok){
+					$( "#dialog:ui-dialog" ).dialog( "destroy" );
+					
+					$("#dialog").html("The security code is not correct.");
+					$("#dialog").dialog({
+						title: "Error",
+						dialogClass: "dialog-error",
+						resizable: false,
+						modal: true,
+						draggable: false,
+						buttons: {
+							"OK": function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					});
+					
+					return false;
+				}
+				
+				$.ajax({
+					url: "addFaq.do?captcha=" + $("#form-add-faq-captcha").val() + "&id=160" + "&question=" + $("#textAreaQuestion").val(),
+					async: false, 
+					success:
+						function(data){
+							if(data == "NOT-OK") ok = false;
+						}
+				});
+				
+				$("#textAreaQuestion").val("");
+				$("#form-add-faq-captcha").val("");
+
+				var date = new Date();
+				$("#form-add-faq-captcha-img").attr("src","captcha.do?action=image&time=" + date.getTime());
+				
+				$( "#dialog:ui-dialog" ).dialog( "destroy" );
+				
+				$("#dialog").html("Your question was sent.");
+				$("#dialog").dialog({
+					title: "Info",
+					dialogClass: "dialog-error",
+					resizable: false,
+					modal: true,
+					draggable: false,
+					buttons: {
+						"OK": function() {
+							$( this ).dialog( "close" );
+						}
+					}
+				});
+
+				return false;
+			}
+		);
+		
+	});
+	
+</script>
+
+<div class="table-title-black">
+	<p>Frequently Asked Questions</p>
+</div>
+
+<div id="faq">
+	
+	
+		<br/>
+		There isn't any question about this code.
+	
+</div>
+
+<div style="height: 30px; width: 100%;"></div>
+
+<div class="table-title-black" >
+	<p>Didn't find your answer ?</p>
+</div>
+
+<div style="text-align: left; width: 738px;background-color: #F4F4F4;padding:5px 15px 15px 15px;">
+	<label>Leave your question here:</label>
+	<textarea id="textAreaQuestion" style="height:72px; width: 100%"></textarea>
+	
+	<label>Please enter the security code written in the box:</label>
+	
+	<div>
+		<img src="captcha.do?action=image" alt="captcha" id="form-add-faq-captcha-img" />
+		<img src="img/refresh.jpg" id="refresh-captcha" alt="refresh" style="cursor: pointer;" />
+	</div>
+	
+	<input type="text" name="captcha" id="form-add-faq-captcha" />
+	
+	<div style="width: 100%; text-align: right;">
+		<a href="#" class="green-button" id="form-add-faq-button-submit">Submit</a>
+	</div>
+	
+</div>
+
+<script>
+	function resetTextAreaQuestion() {
+		document.getElementById("textAreaQuestion").value = "";
+	}
+</script>
+			
+		</div>
+	
+</div>
+
+				
+				<div style="clear: both"></div>
+				
+				<div id="dialog"></div>
+			</div>
+			
+			<div id="footer">
+
+
+<div id="copyright">
+	Copyright 2012 RunMyCode - v1.011
+</div>
+
+<div id="footer-link">	
+	   <a href="firstVisit.do">About</a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="http://www.runmycode.org/data/Privacy_Policy.pdf">Privacy Policy</a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="http://www.runmycode.org/data/Terms_of_Use.pdf">Terms of Use</a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="contact-us.do">Contact</a>		
+</div>
+
+<div id="partenaires">
+	<!-- <map name="image-map">
+		<area shape="rect" coords="7,8,83,86" href="http://www.cnrs.fr/index.php">
+		<area shape="rect" coords="93,8,198,86" href="http://www.hec.edu/">
+		<area shape="rect" coords="203,8,308,86" href="http://www.univ-orleans.fr/presentation/multilingue/?page=3">
+		<area shape="rect" coords="312,8,584,86" href="http://www.tge-adonis.fr/">
+		<area shape="rect" coords="588,8,752,86" href="http://cc.in2p3.fr/">
+	</map> 
+	<img usemap="#image-map" src="images/img/partenaires2.png"/>
+	 -->
+	 
+	 <a href="http://www.sloan.org/"><img src="img/logo-asf-g.png"/></a>
+	 <!-- a href="http://cc.in2p3.fr/"><img src="img/logo-ccin2p3-g.png"/></a -->
+	 <a href="http://www.tge-adonis.fr/"><img src="img/logo-tge-adonis-g.png"/></a>
+	 <a href="http://www.univ-orleans.fr/presentation/multilingue/?page=3"><img src="img/logo-univ-orleans-g.png"/></a>
+	 <a href="http://www.hec.edu/"><img src="img/logo-hec-g.png"/></a>
+	 <a href="http://www.cnrs.fr/index.php"><img src="img/logo-cnrs-g.png"/></a>
+	 
+</div>
+</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>

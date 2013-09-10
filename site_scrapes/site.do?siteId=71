@@ -1,0 +1,3844 @@
+HTTP/1.1 200 OK
+Date: Wed, 26 Jun 2013 18:39:32 GMT
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=utf-8
+Vary: Accept-Encoding
+Keep-Alive: timeout=5, max=85
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+		
+	
+		<title>International Comparisons of Living Standards by Equivalent Incomes</title>
+		<meta http-equiv="description" content="The purpose of this code is to propose an international comparison of measures of living standards for a sample of 24 OECD countries for the year 2004. Based on GDP per capita, the measure incorporates corrections for international flows of income, labor, risk of unemployment, healthy life expectancy, household demography and inequalities. The code displays the GDP per capita, the GDP relative position and the GDP ranking, the absolute value of each correction in dollar terms (per capita), the relative position of countries after each correction and the ranking of countries after each cumulative correction. The user can choose some parameters specific to each correction (for more details see Fleurbaey and Gaulier, 2009). 
+" />
+	
+	
+	<meta http-equiv="keywords" content="runmycode, run my code, runmycode.fr, www.runmycode.fr, runmycode.eu, www.runmycode.eu, runmycode.com, www.runmycode.com, runmycode.org, www.runmycode.org" />
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery/jquery-ui-1.8.9.custom.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/jquery/jquery.tipsy.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/jquery/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/template.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/table.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/companion-site.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
+	
+	<script type="text/javascript" src="js/jquery/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.9.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.fieldcontrol.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>  
+	<script type="text/javascript" src="js/modules/exporting.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.slides.js"></script>
+	<script type="text/javascript" src="js/table.js"></script>
+	<script type="text/javascript" src="js/default.js"></script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a[rel^='abstract']").prettyPhoto({
+				animation_speed: 'fast', /* fast/slow/normal */
+				slideshow: false, /* false OR interval time in ms */
+				autoplay_slideshow: false, /* true/false */
+				opacity: 0.50, /* Value between 0 and 1 */
+				show_title: true, /* true/false */
+				allow_resize: true, /* Resize the photos bigger than viewport. true/false */
+				default_width: 350,
+				default_height: 465,
+				counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+				theme: 'run_my_code', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+				modal: false, /* If set to true, only the close button will close the window */
+				overlay_gallery: false, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+				keyboard_shortcuts: false /* Set to false if you open forms inside prettyPhoto */
+			});		
+		});
+		
+		
+			// Google analytics
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-28089959-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		
+	</script>
+
+</head>
+
+<body>
+
+	<div align="center" style="width: 100%; height: 100%;">
+	
+		<div id="page">
+		
+			<div id="header">
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		// Fenetre de login
+		$('#button-login').click(
+			function() {
+				
+				
+				
+					var url = 'member.do?action=login';
+				
+				
+				$.get(
+					url,
+					function(data) {
+						$('#dialog-login').dialog('destroy');
+						$('#dialog-login').html(data);
+						$('#dialog-login').dialog({minWidth: 360}, {title: 'Already member? Sign in'}, {resizable: false}, {draggable: false}, {modal: true});
+					}
+				);
+				return false;
+			}	
+		);
+		
+		// Effacement de la fenetre de recherche au click
+		$("#search-input").click(function() {
+			if(this.value=='Search here ...') {
+				this.value='';
+			}
+		});
+		
+		// Lancement de la recherche
+		$("#search-button").click(function() {
+			window.location = 'searches.do?search=true&keywords=' + $('#search-input').val();
+		});	
+		
+		// Raccourci (touche "enter") pour la recherche quand le curseur est place dans l'input "search-input"
+		$('#search-input').bind('keypress', function(e) {
+	        if(e.keyCode == 13 && this.value != 'Search here ...'){
+	        	$('#search-button').click();
+	        }
+		});
+		
+		// Redirection vers le portail au click sur le logo
+		$('#logo-run-my-code').click(function() {
+			window.location = 'home.do';
+		});
+		
+	});
+</script>
+
+<div id="background-header">
+
+	<div id="logo-run-my-code"></div>
+	
+	<div id="div-login">
+
+		
+
+		
+			<a href="http://www.runmycode.org/MetaSite/account.do" id="button-register">Register</a> 
+			<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+			<a href="#" id="button-login">Sign In</a>
+			<div id="dialog-login">&nbsp;</div>
+		
+
+	</div>
+
+	<div id="div-search-header">
+		<div id="search-button" style="margin-right: 1px;">
+			Search
+		</div>
+		<div id="search-value">
+			<input id="search-input" type="text" value="Search here ..."/>
+		</div>
+	</div>
+	
+</div></div>
+			
+			<div id="main-content">
+				<div id="menu">
+
+
+
+<script type="text/javascript">
+	
+	var computingQueueSiteDisplay = false;
+	
+	function checkConnexion(){
+		$.ajax({
+	    	url : 'member.do?action=check-connexion',	
+	    	type : "POST", 
+	    	dataType : "json" , 
+	    	success: function(data) {
+				if(data != "OK"){
+					document.location.href = 'http://www.runmycode.org/CompanionSite//index.jsp';
+				}else{
+					setTimeout(function(){checkConnexion();}, 60000);
+				}
+	    	}
+	    });
+	}
+	
+	$(document).ready(function(){
+		
+		
+		
+			
+			
+			
+				
+					
+				
+			
+			
+		
+		
+		
+		
+	});
+	
+	function refreshAnonymousSite(){
+		$.ajax({
+	    	url : "task.do?action=list-current-task",	
+	    	type : "POST", 
+	    	dataType : "json" , 
+	    	success: function(data) {
+				var tbody = "";
+				var tr = 0;
+				
+				$.each(data[0].results, function(index, result) {
+				
+					
+						
+					
+
+				});
+				
+				$.each(data[0].queue, function(index, calcul) {
+	
+					
+						
+					
+			
+				});
+				
+				if(tbody != ""){
+					$("#site-computing-queue-tbody").html(tbody);
+					if(!computingQueueSiteDisplay){
+						$("#site-computing-queue-li").show();
+						computingQueueSiteDisplay = true;
+					}
+				}else{
+					if(computingQueueSiteDisplay){
+						$("#site-computing-queue-li").hide();
+						computingQueueSiteDisplay = false;
+					}
+				}
+				
+				
+				
+				setTimeout(function(){refreshAnonymousSite();}, 5000);
+	    	}
+	    });	
+	}
+
+	function refreshQueue() {
+	    $.ajax({
+	    	url : "task.do?action=list-current-task",	
+	    	type : "POST", 
+	    	dataType : "json" , 
+	    	success: function(data) {
+				var divPastResults = "";
+				var divComputingQueue = "";
+				var tbody = "";
+				var tr = 0;
+				
+				$.each(data[0].results, function(index, result) {
+					
+					$('#results').html('Past results');
+					
+					
+					
+						
+							if(result.site == '71'  && !result.anonymous) {
+								if(tr%2 == 0) tbody += '<tr class="even">';
+								else tbody += '<tr class="odd">';
+								tbody += '<td>' + result.begin + '</td>';
+								tbody += '<td>Computation completed</td>';
+								tbody += '<td><a href="site.do?siteId=' + result.site + '&amp;task=' + result.id + '"><img src="img/button-cs-view.jpg" alt="view"></a></td>';
+								tbody += '</tr>';
+								tr++;
+							}
+						
+						
+						
+						
+						
+						
+					
+					
+					
+				});
+				
+				$.each(data[0].queue, function(index, calcul) {
+					
+					
+					
+						
+							if(calcul.site == '71' && !calcul.anonymous) {
+								if(tr%2 == 0) tbody += '<tr class="even">';
+								else tbody += '<tr class="odd">';
+								tbody += '<td>' + calcul.begin + '</td>';
+								tbody += '<td>Computation in process</td>';
+								tbody += '<td></a></td>';
+								tbody += '</tr>';
+								tr++;
+							}
+						
+						
+						
+							
+					
+					
+					if(!calcul.anonymous){
+						divComputingQueue += '<a class="link" href="site.do?siteId=' + calcul.site + '">' + calcul.task + '</a><br>';
+					}else{
+						divComputingQueue += '<a class="link" href="Blind73' + calcul.site + '5">' + calcul.task + '</a><br>';
+					}
+					
+				});
+				
+				$("#computing-queue").html(divComputingQueue);
+				
+				if(tbody != ""){
+					$("#site-computing-queue-tbody").html(tbody);
+					if(!computingQueueSiteDisplay){
+						$("#site-computing-queue-li").show();
+						computingQueueSiteDisplay = true;
+					}
+				}else{
+					if(computingQueueSiteDisplay){
+						$("#site-computing-queue-li").hide();
+						computingQueueSiteDisplay = false;
+					}
+				}
+				
+				setTimeout(function(){refreshQueue();}, 5000);
+	    	}
+	    });
+	}
+
+</script>
+
+<ul class="border">
+	<li><a class="link" href="home.do">Home</a></li>
+	<li><a class="link" href="firstVisit.do">First visit?</a></li>
+	<li><a class="link" href="offering.do">Our offering</a></li>
+	<li><a class="link" href="submitYourCode.do">Submit your code</a></li>
+</ul>
+	
+<ul class="border">
+	<li><a class="link" href="searches.do?action=search-by-themes">Search by themes</a></li>
+  	<li><a class="link" href="searches.do?action=advanced-search">Advanced search</a></li>
+</ul>
+
+<ul>
+  	<li><a class="link" href="faq.do">Help/FAQ</a></li>
+  	<li><a class="link" href="partner.do">Our partners</a></li>
+  	<li><a class="link" href="team.do">The team</a></li>
+  	<li><a class="link" href="contact-us.do">Contact us</a></li>
+</ul>
+
+
+
+	
+
+<div class="clear"></div>
+</div>
+				
+
+
+
+
+
+<script type="text/javascript">
+
+	var confirm_add_in_selection = false;
+	
+	function addInSelection(action) {
+		var url = "ajaxAddInSelection.do";
+		var type =  "POST";
+		var params = {};
+		
+		params['siteId'] = 71;
+		params['isFavoris'] = "true";
+		params['action'] = action;
+		
+		var displaySuccess = function() {
+			$("#add-in-selection").hide();
+		};
+		
+		$.ajax({url : url ,	
+			type : type ,
+	    	data : params ,  
+	    	success: displaySuccess 
+	    });
+	}
+	
+	function notAddInSelection(action) {
+		var url = "ajaxAddInSelection.do";
+		var type =  "POST";
+		var params = {};
+		
+		params['siteId'] = 71;
+		params['isFavoris'] = "false";
+		params['typeAction'] = action;
+		
+		var displaySuccess = function() {
+			$("#add-in-selection").hide();
+		};
+		
+		$.ajax({
+			url : url,	
+			type : type,
+	    	data : params,  
+	    	success: displaySuccess 
+	    });
+	}
+	
+	function registerAction(action) {
+		var url = "ajaxAddInSelection.do";
+		var type =  "POST";
+		var params = {};
+		
+		params['siteId'] = 71;
+		params['typeAction'] = action;
+		
+		$.ajax({url : url, type : type, data : params});
+	}
+	
+	function confirmAddInSelection(action){
+		
+	}
+
+	$(document).ready(function() {
+		
+		$("#companion-site-tabs").tabs();
+		$("#cs-tab-bottom").tabs();
+		$("#cs-tab-bottom").tabs('disable',3);
+		displayEtatAvancement(1);
+	
+		$('#add-in-selection').unbind("click");
+		$('#add-in-selection').click(function() {
+			var url = "ajaxAddInSelection.do";
+			var type =  "POST";
+			var params = {};
+			params['siteId'] = 71;
+			params['isFavoris'] = "true";
+			
+			var displaySuccess = function() {
+				$("#add-in-selection").hide();
+				alertez('This site has been successfully added in your selection.');
+			};
+			var displayError = function() {
+				alertez('An error occured when trying to add this site in your selection.');
+			};
+			$.ajax({url : url ,	
+				type : type ,
+		    	data : params ,  
+		    	success: displaySuccess , 
+		    	error : displayError 
+		    });
+		});
+		
+		$('#follow-update').unbind("click");
+		$('#follow-update').click(function() {
+			var url = "ajaxAddInSelection.do";
+			var type =  "POST";
+			var params = {};
+			params['siteId'] = 71;
+			params['isFollow'] = "true";
+			
+			var displaySuccess = function() {
+				$("#follow-update").hide();
+				alertez('');
+			};
+			var displayError = function() {
+				alertez('');
+			};
+			$.ajax({url : url ,	
+				type : type ,
+		    	data : params ,  
+		    	success: displaySuccess , 
+		    	error : displayError 
+		    });
+		});
+	
+	});
+
+</script>
+
+<div id="companion-site-tabs">
+
+
+	
+
+	<ul>
+		<li><a class="tab-link" href="#cs-tab"><span>Companion site</span> </a></li>
+		
+			<li><a class="tab-link" href="#coders-tab"><span>Coders</span></a></li>
+			<li><a class="tab-link" href="#similar-site-tab"><span>Similar sites</span> </a></li>
+			<li><a class="tab-link" href="#faq-tab"><span>FAQ</span> </a></li>
+				
+	</ul>
+	
+	<div class="grey-line"></div>
+	
+	<div id="cs-tab">
+		<div id="cs-tab-top">
+			
+
+
+
+
+
+ 
+
+<script>
+
+	function downloadData(){
+		confirmAddInSelection(DOWNLOAD_DEMO_DATA);
+		_gaq.push(['_trackPageview', '/companionSite71/data/data.zip']);
+	}
+	
+	function downloadScript(){
+		confirmAddInSelection(DOWNLOAD_CODE);
+		_gaq.push(['_trackPageview', '/companionSite71/script/script.zip']);
+	}
+	
+	$(function(){
+		$('#slides').slides({
+			play: 10000,
+			pause: 2500,
+			hoverPause: true,
+			slideSpeed: 1000,
+			generatePagination: false,
+			autoHeight: true
+		});
+	});
+	
+</script>
+ 
+<div id="top-infos">
+
+	<div id="site-name">
+		
+		International Comparisons of Living Standards by Equivalent Incomes
+	</div>
+	
+	
+	
+		<div id="author-names">
+			By 
+			
+				
+			
+				<span>
+					Guillaume
+					
+					
+					Gaulier</span>,
+					and
+			
+				
+			
+				<span>
+					Marc
+					
+					
+					Fleurbaey</span>
+					
+			
+		</div>
+		
+		<div id="journal">
+			<span>
+				
+					The Scandinavian Journal of Economics
+				
+					
+				(2009)
+			</span>
+			<a href="#abstract-paper-71" rel="abstractPaper71" class="link">Abstract</a> 
+			<a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1489058" target="_blank" class="link">Paper</a> 
+			
+		</div>
+	
+	
+	
+	<div class="grey-line-h7"></div>
+	
+</div>
+
+<div id="left-infos">
+	<div id="description">
+	
+		
+	
+			
+			
+			
+				<div id="top-description">
+					<span>Coders:</span>
+				</div>
+				<div class="separate-horizontal-coders"></div>
+				<div id="middle-description">
+					
+						
+					
+						<div class="slide" style="width: 180px; float: left;">
+							
+								
+									<img class="picture" style="margin:0 40px 0 50px;" src="/data/MetaSite/upload/mfleurbaey/bd61c2f2afcf33b531020fa023f86ed74d94b8da.jpg">
+								
+								
+							
+							<div>
+								<p class="name"  style="text-align: center;">
+									Marc
+									
+									Fleurbaey
+								</p>
+								<p class="affiliation"  style="text-align: center;">
+									Princeton University 
+								</p>
+								<p class="country"  style="text-align: center;">
+									United States
+								</p>
+								<p style="text-align: center;margin-left :20px;">
+									<a class="link" href="coders.do?action=infos&id=144">
+										Coder Page &nbsp;
+									</a> 
+									<img style="float:none;" src="images/icones/smallLogoRMC.png" height="15px" width="15px">						
+								</p>
+							</div>
+						</div>
+						
+							<div class="separate-vertical-coders" style="margin-top:35px;"></div>
+						
+					
+						
+					
+						<div class="slide" style="width: 180px; float: left;">
+							
+								
+									<img class="picture" style="margin:0 40px 0 50px;" src="/data/MetaSite/upload/ggaulier/2acbf4794af8f753d2c75683da75ac0c59b059ef.png">
+								
+								
+							
+							<div>
+								<p class="name"  style="text-align: center;">
+									Guillaume
+									
+									Gaulier
+								</p>
+								<p class="affiliation"  style="text-align: center;">
+									Banque de France
+								</p>
+								<p class="country"  style="text-align: center;">
+									France
+								</p>
+								<p style="text-align: center;margin-left :20px;">
+									<a class="link" href="coders.do?action=infos&id=56">
+										Coder Page &nbsp;
+									</a> 
+									<img style="float:none;" src="images/icones/smallLogoRMC.png" height="15px" width="15px">						
+								</p>
+							</div>
+						</div>
+						
+					
+				</div>
+				<div class="separate-horizontal-coders"></div>
+			
+			
+			
+		
+		
+		
+		
+		
+	</div> <!-- end description -->
+	
+	
+	
+		<div id="details">
+			<p>
+				
+					
+						
+							<span>199</span>
+						
+						
+					
+				
+				Visits
+				
+				
+					
+						
+						
+					
+				
+			</p>
+			
+			
+				<p>
+					
+						
+							
+								<span>27</span>
+							
+							
+						
+					
+					Runs
+					
+					
+						
+							
+							
+						
+					
+				</p>
+			
+			
+			
+				
+				
+				
+			
+			<!-- 
+			
+				<p>Average computing time 
+					
+						
+							<span>
+								
+								
+								
+							
+								
+									04h
+								
+								
+									06m
+								
+								
+									22s
+								
+							</span>
+						
+						
+					
+				</p>
+			
+			 -->
+			
+			<p>
+				Ranking
+				
+				
+					
+						
+							<span>9</span>
+						
+						
+					
+				
+			</p>
+			
+			<div style="margin-top: 15px;">
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+				<!-- a class="addthis_counter addthis_pill_style"></a -->
+				</div>
+				<script type="text/javascript">
+					var addthis_config = {
+						ui_language: "en"
+					};
+				</script>
+				<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f86e04f4d34fb93"></script>
+				<!-- AddThis Button END -->
+			</div>
+			
+		</div> <!-- end details -->
+		
+	
+
+</div>
+
+<div id="right-infos">
+
+	<div id="resume-code" class="cadre">
+		<div id="top-resume-code">
+			The purpose of this code is to propose an international comparison of measures of living standards for a sample of 24 OECD countries for the year 2004. Based on GDP per capita, the measure incorporates corrections for international flows of income, labor, risk of unemployment, healthy life expectancy, household demography and inequalities. The code displays the GDP per capita, the GDP relative position and the GDP ranking, the absolute value of each correction in dollar terms (per capita), the relative position of countries after each correction and the ranking of countries after each cumulative correction. The user can choose some parameters specific to each correction (for more details see Fleurbaey and Gaulier, 2009). 
+
+		</div>
+		<div>
+			
+		</div>
+	</div>
+	
+	<div id="infos-code" class="cadre">
+		<div>
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 80px;"/>
+						<th style="width: 100px;"/>
+					</tr>
+				<tbody>
+					<tr>
+						<td>Created</td>
+						<td class="weak-grey">March 08, 2012</td>
+					</tr>
+					
+					<tr>
+						<td>Last update</td>
+						<td class="weak-grey"">July 23, 2012</td>
+					</tr>
+					
+					
+						<tr>
+							<td>Software</td>
+							<td class="weak-grey"">
+								Matlab
+								R2008a
+							</td>
+						</tr>
+					
+					
+				</tbody>
+			</table>
+		</div>
+		
+		
+		
+		
+		
+	</div>
+	
+</div>		
+<div style="clear: both;"></div>
+
+<!-- Abstract publication -->
+<div id="abstract-paper-71" class="abstract-paper">
+
+	<div class="top-abstract-paper">
+		<div class="top-left-abstract-paper">Abstract</div>
+		<div class="top-right-abstract-paper">Close</div>
+	</div>
+	
+	<div class="abstract-separate-line"></div>
+	
+	<div class="middle-abstract-paper">
+		<!-- description du site -->
+		We propose a measure of living standards for international comparisons. Based on GDP per
+capita, the measure incorporates corrections for international flows of income, labor, risk of
+unemployment, healthy life expectancy, household demography and inequalities. The method
+for comparing populations that differ in some non-income dimension consists of computing
+the equivalent variation of income that would make each population indifferent between its
+current situation and a reference situation with respect to the non-income dimension. This is
+applied to 24 OECD countries. The obtained ranking of countries differs substantially from
+the GDP ranking.
+	</div>
+	
+	<div class="abstract-separate-line"></div>
+	
+	<div class="bottom-abstract-paper">
+		
+			
+		
+			
+				
+				
+					Gaulier,
+					
+					G.,
+				
+				
+				
+			
+		
+			
+		
+			
+				
+				
+				
+					and
+					M.
+					
+					Fleurbaey,
+				
+				
+			
+		
+		"International Comparisons of Living Standards by Equivalent Incomes",
+		
+			
+			
+				<i>The Scandinavian Journal of Economics</i>
+				, 111, 597-624.
+				<br/>
+			
+			
+			
+		
+		
+		<div>
+			<a class="link" target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1489058">Access to full paper</a>
+		</div>
+		
+	</div>
+	
+</div>		
+
+		</div>
+		
+		
+		
+		 	
+		 	
+			<div id="cs-tab-bottom">
+				<ul>
+					<li><a class="tab-link" href="#your-data-tab"><span>Your data</span></a></li>
+					<li><a class="tab-link" href="#inputs-description-tab"><span>Inputs description</span></a></li>
+					<li><a class="tab-link" href="#demo-data-description-tab"><span>Demo data description</span></a></li>
+					<li><a class="tab-link" href="#results-tab"><span>Results</span></a></li>
+					<li class="right" id="site-computing-queue-li"><a class="tab-link" href="#site-computing-queue-tab"><span>Computing queue</span></a></li>
+				</ul>
+				<div class="green-line-h8"></div>
+				<div id="your-data-tab">
+
+
+
+
+
+<script type="text/javascript">
+	var is_computing = false;
+	
+	function previewData() {
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	}
+	
+	/**
+	 * Lance le calcul et place le numero du site dans la liste des calculs en cours
+	 */
+	function compute() {
+		var params = {};
+		params["site"] = 71;
+
+		
+	
+	    $.ajax({
+	    	url : "task.do?action=add-task" ,
+	    	type : "POST",
+	    	async: true,
+	    	dataType : "json",
+	    	data : params,
+	    	success: function(data){	
+	    		// Serveur KO
+	    		if(data == null){
+	    			addMessage(errorMessage2, 1, "div-message");
+	    		}else{
+		    		// nombre calcul en cours KO
+		    		if(data[0].isMaxComputesReached){
+						addMessage(errorMessage6, 1, "div-message");
+					// nombre calcul en cours PK
+					}else{
+						// DATA OK
+						if(data[0].isDataOk){
+							// Serveur OK
+							if(data[0].isTaskAdd){
+								displayEtatAvancement(2);
+								
+									addMessage("Computation in process. Please check the status of your computation in the computing queue/past results (left menu). You can leave the website and return later to retrieve your results.", 3, "div-message");
+								
+								
+								setTimeout(function(){displayEtatAvancement(4);}, 6000);
+								
+							// Serveur KO
+							}else{	
+								addMessage(errorMessage1, 1, "div-message");
+							}
+						// DATA KO
+						}else{
+							addMessage(errorMessage2, 1, "div-message");
+						}
+					}
+	    		}
+	    		
+	    		unWaitIt();
+	    	},
+	    	// Serveur KO
+	    	error : function(data){
+	    		addMessage(errorMessage1, 1, "div-message");
+	    		unWaitIt();
+	    	}
+	    });
+	}
+	
+	function waitIt(){
+		$.ajax({
+			async: true,
+			success: function(){
+				is_computing = true;
+				$("#button-wait").html('<img src="images/icones/wait.gif" alt="loading" />');
+			}
+		});
+	}
+	
+	function unWaitIt(){
+		$.ajax({
+			async: true,
+			success: function(){
+				is_computing = false;
+				$("#button-wait").html('');
+			}
+		});
+	}
+	
+	$(document).ready(function(){
+		
+		var isDemoDataExist = false;
+		
+		
+		
+		
+			$.ajax({
+		        url: '/data/MetaSite/upload/companionSite71/data/demo-result.pdf', 
+		        method: 'post',
+		        async: false,
+		        error: function(XMLHttpRequest, textStatus, errorThrown){isDemoDataExist = false;},
+		        success: function(data){isDemoDataExist = true;}
+		    });
+		
+		
+		// TODO
+		isDemoDataExist = true;
+		
+		$("#button-run-my-code").unbind("click");
+		$("#button-run-my-code").click(
+			function(){
+				confirmAddInSelection(EXECUTE_CODE);
+			
+				if(is_computing) return false;
+				waitIt();
+				
+				/*$.ajax({
+					async: true,
+					type: "GET",
+					success: function(){*/
+				
+						
+						
+						
+							if (!isDemoData) {
+								
+								/**
+								 * si pas de membre en session, on demande l identification
+								 */
+								
+							
+									
+										unWaitIt();
+										$('#button-login').click();
+									
+									
+									// on execute si c'est une site anonyme
+									
+									
+								
+								
+								/**
+								 * sinon on prepare le calcul
+								 */
+								 
+								
+							} else {
+								registerAction(EXECUTE_DEMO_DATA);
+								if(!isDemoDataExist){
+									$("#dialog:ui-dialog").dialog("destroy");
+									$("#dialog").html('This companion website is temporarily down for maintenance. It should be back online shortly');
+									$("#dialog").dialog({
+										title: "Info",
+										dialogClass: "dialog-error",
+										resizable: false,
+										modal: true,
+										draggable: false,
+										buttons: {
+											"OK": function(){
+												unWaitIt();
+												$(this).dialog("close");
+											}
+										}
+									});
+								}else{
+									unWaitIt();
+									
+									
+										_gaq.push(['_trackPageview', '/companionSite71/data/demo-result.pdf']);
+										displayEtatAvancement(3);
+									
+									
+									
+								}
+							}
+						
+					/*}
+				});*/
+			}
+		);
+		
+		$("#button-load-demo-data").unbind("click");
+		$("#button-load-demo-data").click(
+			function(){
+				confirmAddInSelection(LOAD_DEMO_DATA);
+				$("#div-message").hide();
+
+				
+					$('#input-815').fieldcontrol({rows_current: 0, columns_current: 0});		
+					$('#input-815').fieldcontrol('getDemoData');
+				
+					$('#input-824').fieldcontrol({rows_current: 0, columns_current: 0});		
+					$('#input-824').fieldcontrol('getDemoData');
+				
+					$('#input-823').fieldcontrol({rows_current: 0, columns_current: 0});		
+					$('#input-823').fieldcontrol('getDemoData');
+				
+					$('#input-825').fieldcontrol({rows_current: 0, columns_current: 0});		
+					$('#input-825').fieldcontrol('getDemoData');
+				
+					$('#input-837').fieldcontrol({rows_current: 0, columns_current: 0});		
+					$('#input-837').fieldcontrol('getDemoData');
+				
+					$('#input-831').fieldcontrol({rows_current: 0, columns_current: 0});		
+					$('#input-831').fieldcontrol('getDemoData');
+				
+				
+			    if(isDemoDataExist){
+			    	$("#button-run-my-code").removeClass("button-disable");
+					$("#button-run-my-code").addClass("button-enable");
+			    }else{
+			    	$("#button-run-my-code").removeClass("button-enable"); 
+					$("#button-run-my-code").addClass("button-disable");
+			    }
+			    
+			    isDemoData = true;
+			}
+		);
+		
+		$("#button-reset-data").unbind("click");
+		$("#button-reset-data").click(
+			function(){
+				
+				
+					$('#input-815').fieldcontrol('reset');
+				
+					$('#input-824').fieldcontrol('reset');
+				
+					$('#input-823').fieldcontrol('reset');
+				
+					$('#input-825').fieldcontrol('reset');
+				
+					$('#input-837').fieldcontrol('reset');
+				
+					$('#input-831').fieldcontrol('reset');
+				
+				
+				isDemoData = false;
+				
+				
+			    
+			    	$("#button-run-my-code").removeClass("button-disable"); 
+		    		$("#button-run-my-code").addClass("button-enable");
+			    
+			    
+				$("#cs-tab-bottom").tabs('disable', 3);
+				$("#div-message").hide();
+				
+				if(isPreview){
+					$("#div-preview-data").toggle('blind');
+					isPreview = false;
+					$("#button-preview-data").html("Preview data");
+				}
+			
+			}
+		);
+
+		/*
+		 *calcul de la hauteur de div-input
+		 */
+		var hmax = 0;
+		
+		/*Gestion affichage des inputs*/
+		
+
+			/* Gestion des contraintes*/
+			$('#input-815').fieldcontrol({
+				id: 815
+				,site: 71
+				,name: $('#label-815-hold').html()
+				
+				// Position
+				,top: 30
+				,left: 270
+				
+				// Tailles
+				,width: 170
+				,height: 165
+				
+				// Position du label
+				
+					,labelPosition: 4
+				
+				
+				,mandatory: true
+				,type: 5
+				
+				
+					,variableType: 0
+				
+					
+				
+					,multipleValue: true
+				
+				
+				
+					
+								
+				
+					,actions:[
+						
+							{value: "1", action: ''}
+							
+						
+							
+							, {value: "4", action: ''}
+						
+							
+							, {value: "5", action: ''}
+						
+							
+							, {value: "6", action: ''}
+						
+							
+							, {value: "2", action: ''}
+						
+							
+							, {value: "3", action: ''}
+						
+					]
+				
+					
+				
+				
+			});
+			
+			
+			
+			if (hmax < 195) {
+				hmax = 195;
+			}
+
+		
+
+			/* Gestion des contraintes*/
+			$('#input-824').fieldcontrol({
+				id: 824
+				,site: 71
+				,name: $('#label-824-hold').html()
+				
+				// Position
+				,top: 30
+				,left: 680
+				
+				// Tailles
+				,width: 70
+				,height: 25
+				
+				// Position du label
+				
+					,labelPosition: 4
+				
+				
+				,mandatory: true
+				,type: 1
+				
+				
+					,variableType: 2
+				
+					
+				
+				
+				
+					
+								
+				
+					
+				
+				
+			});
+			
+			
+			
+			if (hmax < 55) {
+				hmax = 55;
+			}
+
+		
+
+			/* Gestion des contraintes*/
+			$('#input-823').fieldcontrol({
+				id: 823
+				,site: 71
+				,name: $('#label-823-hold').html()
+				
+				// Position
+				,top: 85
+				,left: 680
+				
+				// Tailles
+				,width: 70
+				,height: 25
+				
+				// Position du label
+				
+					,labelPosition: 4
+				
+				
+				,mandatory: true
+				,type: 1
+				
+				
+					,variableType: 2
+				
+					
+				
+				
+				
+					
+								
+				
+					
+				
+				
+			});
+			
+			
+			
+			if (hmax < 110) {
+				hmax = 110;
+			}
+
+		
+
+			/* Gestion des contraintes*/
+			$('#input-825').fieldcontrol({
+				id: 825
+				,site: 71
+				,name: $('#label-825-hold').html()
+				
+				// Position
+				,top: 195
+				,left: 680
+				
+				// Tailles
+				,width: 80
+				,height: 25
+				
+				// Position du label
+				
+					,labelPosition: 4
+				
+				
+				,mandatory: true
+				,type: 5
+				
+				
+					,variableType: 2
+				
+					
+				
+				
+				
+					
+								
+				
+					,actions:[
+						
+							{value: "0", action: ''}
+							
+						
+							
+							, {value: "0.1", action: ''}
+						
+							
+							, {value: "0.2", action: ''}
+						
+							
+							, {value: "0.3", action: ''}
+						
+							
+							, {value: "0.4", action: ''}
+						
+					]
+				
+					
+				
+				
+			});
+			
+			
+			
+			if (hmax < 220) {
+				hmax = 220;
+			}
+
+		
+
+			/* Gestion des contraintes*/
+			$('#input-837').fieldcontrol({
+				id: 837
+				,site: 71
+				,name: $('#label-837-hold').html()
+				
+				// Position
+				,top: 140
+				,left: 680
+				
+				// Tailles
+				,width: 70
+				,height: 25
+				
+				// Position du label
+				
+					,labelPosition: 4
+				
+				
+				,mandatory: true
+				,type: 1
+				
+				
+					,variableType: 2
+				
+					
+				
+				
+				
+					
+								
+				
+					
+				
+				
+			});
+			
+			
+			
+			if (hmax < 165) {
+				hmax = 165;
+			}
+
+		
+
+			/* Gestion des contraintes*/
+			$('#input-831').fieldcontrol({
+				id: 831
+				,site: 71
+				,name: $('#label-831-hold').html()
+				
+				// Position
+				,top: 250
+				,left: 690
+				
+				// Tailles
+				,width: 70
+				,height: 25
+				
+				// Position du label
+				
+					,labelPosition: 4
+				
+				
+				,mandatory: true
+				,type: 1
+				
+				
+					,variableType: 2
+				
+					
+				
+				
+				
+					
+								
+				
+					
+				
+				
+			});
+			
+			
+			
+			if (hmax < 275) {
+				hmax = 275;
+			}
+
+		
+		
+		if (hmax != 0) {
+			hmax += 20;
+			if(hmax > 400) $("#div-input").css({height: hmax +"px"});
+			else $("#div-input").css({height: "400px"});
+		} else {
+			$("#div-input").css({height: "400px"});
+		}
+		
+		
+			calculEnable = true;
+		
+	
+		if(!isPreviewable){
+			$("#button-preview-data").hide();
+		}else{
+			$("#button-preview-data").unbind("click");
+			$("#button-preview-data").click(function(){
+				if(!isPreviewable) return false;
+				
+				$("#div-preview-data").toggle('blind');
+				 
+				if(!isPreview){
+					isPreview = true;
+					previewData();
+					$("#button-preview-data").html("Close preview data");
+				}else{
+					isPreview = false;
+					$("#button-preview-data").html("Preview data");
+				}
+
+			});
+		}
+		
+		
+		
+		
+		
+		$("#select-demos-datas").unbind("click");
+		$("#select-demos-datas").click(function(){
+			
+			
+			
+				$('#input-815').fieldcontrol('reset');
+			
+				$('#input-824').fieldcontrol('reset');
+			
+				$('#input-823').fieldcontrol('reset');
+			
+				$('#input-825').fieldcontrol('reset');
+			
+				$('#input-837').fieldcontrol('reset');
+			
+				$('#input-831').fieldcontrol('reset');
+			
+			
+			isDemoData = false;
+			
+			
+		    
+		    	$("#button-run-my-code").removeClass("button-disable"); 
+	    		$("#button-run-my-code").addClass("button-enable");
+		    
+		    
+			$("#cs-tab-bottom").tabs('disable', 3);
+			$("#div-message").hide();
+			
+			if(isPreview){
+				$("#div-preview-data").toggle('blind');
+				isPreview = false;
+				$("#button-preview-data").html("Preview data");
+			}
+			
+			var value = $("#select-demos-datas").val();
+			
+			if(value != 0){
+				
+				if(value == 1){
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 2){
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 3){
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 4){
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 5){
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 6){
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 7){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("ln_a~=. ");
+				}else if(value == 8){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val(" bank==0");
+				}else if(value == 9){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("ind_4dig~=1165 & soe==0");
+				}else if(value == 10){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_2dig");
+					$("#input-1450").val("ch30==1");
+				}else if(value == 11){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("ch30==0");
+				}else if(value == 12){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_2dig");
+					$("#input-1450").val("asize==1");
+				}else if(value == 13){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("asset<2000 & asset>=80");
+				}else if(value == 14){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_2dig");
+					$("#input-1450").val(" asset<80 ");
+				}else if(value == 15){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_2dig");
+					$("#input-1450").val("manufacture==0");
+				}else if(value == 16){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("manufacture==1");
+				}else if(value == 17){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("roa>=0.05 ");
+				}else if(value == 18){
+					$("#input-1446").val("tq");
+					$("#input-1463").val("i.ind_4dig");
+					$("#input-1450").val("roa<0.05");
+				}
+				
+			}
+			
+		});
+		
+
+		
+		
+	});
+</script>
+
+<div id="avancement">
+	<div>1. Load your data</div>
+	<div>2. RunMyCode</div>
+	<div>3. Receive your results</div>
+</div>
+
+<div id="div-input">
+
+	
+	
+		<span id="label-815-hold" class="label-hold">Correction for equivalent income</span>
+		
+		<div
+			id="div-input-815"
+			style="
+				top:30px;
+				left:250px;
+				width:170px;
+				height:165px;
+				position: absolute;
+				text-align: left;
+			"
+			class="div-input"
+		>
+			
+			<div class="name" id="label-815">Correction for equivalent income <img src="img/question.png" onclick="javascript:$('#cs-tab-bottom').tabs('select', 1);" /></div>
+						
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+						<textarea style="display: none;" id="input-815" name="data"></textarea>
+						
+							<div class="choice">
+								<input type="checkbox" name="data-checkbox815" value="1" /> Consumption prices<br />
+							</div>
+						
+							<div class="choice">
+								<input type="checkbox" name="data-checkbox815" value="4" /> Health <br />
+							</div>
+						
+							<div class="choice">
+								<input type="checkbox" name="data-checkbox815" value="5" /> Household composition<br />
+							</div>
+						
+							<div class="choice">
+								<input type="checkbox" name="data-checkbox815" value="6" /> Inequalities<br />
+							</div>
+						
+							<div class="choice">
+								<input type="checkbox" name="data-checkbox815" value="2" /> Labor<br />
+							</div>
+						
+							<div class="choice">
+								<input type="checkbox" name="data-checkbox815" value="3" /> Risk of unemployment<br />
+							</div>
+						
+					
+					
+				
+				
+			
+			
+		</div>
+		
+	
+	
+		<span id="label-824-hold" class="label-hold">Discount factor</span>
+		
+		<div
+			id="div-input-824"
+			style="
+				top:30px;
+				left:660px;
+				width:70px;
+				height:25px;
+				position: absolute;
+				text-align: left;
+			"
+			class="div-input"
+		>
+			
+			<div class="name" id="label-824">Discount factor <img src="img/question.png" onclick="javascript:$('#cs-tab-bottom').tabs('select', 1);" /></div>
+						
+			
+			
+				
+				
+					<input id="input-824" />
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+		</div>
+		
+	
+	
+		<span id="label-823-hold" class="label-hold">Coefficient of Relative Risk Aversion</span>
+		
+		<div
+			id="div-input-823"
+			style="
+				top:85px;
+				left:660px;
+				width:70px;
+				height:25px;
+				position: absolute;
+				text-align: left;
+			"
+			class="div-input"
+		>
+			
+			<div class="name" id="label-823">Coefficient of Relative Risk Aversion <img src="img/question.png" onclick="javascript:$('#cs-tab-bottom').tabs('select', 1);" /></div>
+						
+			
+			
+				
+				
+					<input id="input-823" />
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+		</div>
+		
+	
+	
+		<span id="label-825-hold" class="label-hold">Unemployment stigma</span>
+		
+		<div
+			id="div-input-825"
+			style="
+				top:195px;
+				left:660px;
+				width:80px;
+				height:25px;
+				position: absolute;
+				text-align: left;
+			"
+			class="div-input"
+		>
+			
+			<div class="name" id="label-825">Unemployment stigma <img src="img/question.png" onclick="javascript:$('#cs-tab-bottom').tabs('select', 1);" /></div>
+						
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+						<select id="input-825">
+							<option value="">--</option>
+							
+								
+									<option value="0">0%</option>
+								
+							
+								
+									<option value="0.1">10%</option>
+								
+							
+								
+									<option value="0.2">20%</option>
+								
+							
+								
+									<option value="0.3">30%</option>
+								
+							
+								
+									<option value="0.4">40%</option>
+								
+							
+						</select>
+					
+					
+					
+					
+					
+				
+				
+			
+			
+		</div>
+		
+	
+	
+		<span id="label-837-hold" class="label-hold">Household scale</span>
+		
+		<div
+			id="div-input-837"
+			style="
+				top:140px;
+				left:660px;
+				width:70px;
+				height:25px;
+				position: absolute;
+				text-align: left;
+			"
+			class="div-input"
+		>
+			
+			<div class="name" id="label-837">Household scale <img src="img/question.png" onclick="javascript:$('#cs-tab-bottom').tabs('select', 1);" /></div>
+						
+			
+			
+				
+				
+					<input id="input-837" />
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+		</div>
+		
+	
+	
+		<span id="label-831-hold" class="label-hold">Social preference for equality</span>
+		
+		<div
+			id="div-input-831"
+			style="
+				top:250px;
+				left:670px;
+				width:70px;
+				height:25px;
+				position: absolute;
+				text-align: left;
+			"
+			class="div-input"
+		>
+			
+			<div class="name" id="label-831">Social preference for equality <img src="img/question.png" onclick="javascript:$('#cs-tab-bottom').tabs('select', 1);" /></div>
+						
+			
+			
+				
+				
+					<input id="input-831" />
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+		</div>
+		
+	
+	
+</div>
+
+<div id="div-run">
+	<span>Waiting time</span>
+	<div class="grey-line"></div>
+	<div id="div-loading"><img src="images/icones/ajax-loader.gif"></div>
+	
+	
+	
+		<div>
+			<p class="bold">Please cite the publication as :<p>
+			<p class="weak-grey">
+				
+					
+				
+					
+						
+						
+							Gaulier,
+							
+							G.,
+						
+						
+						
+					
+				
+					
+				
+					
+						
+						
+						
+							and
+							M.
+							
+							Fleurbaey,
+						
+						
+					
+				
+				"International Comparisons of Living Standards by Equivalent Incomes",
+				
+					
+					
+						<i>The Scandinavian Journal of Economics</i>
+						, 111, 597-624.
+						<br/>
+					
+					
+					
+				
+			</p>
+		</div>
+		<div class="grey-line-h7"></div>
+		<div>
+			<p class="bold">Please cite the companion website as :<p>
+			<p class="weak-grey">
+				
+					
+				
+					
+						
+						
+							Gaulier,
+							
+							G.,
+						
+						
+						
+					
+				
+					
+				
+					
+						
+						
+						
+							and
+							M.
+							
+							Fleurbaey,
+						
+						
+					
+				
+				"International Comparisons of Living Standards by Equivalent Incomes",
+				RunMyCode companion website,
+				<a class="link" href="http://www.runmycode.org/CompanionSite/Site71">http://www.runmycode.org/CompanionSite/Site71</a>
+			</p>
+		</div>
+		
+		<!-- div id="button-abort" class="blue-button" onClick="javascript: abort(71)">
+			Abort computation
+		</div -->
+		
+	
+	
+</div>
+
+<div id="div-message"></div>
+
+<div id="div-preview-data" style="display: none;">
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+</div>
+
+<div id="div-buttons">
+	<div id="button-run-my-code" class="button-enable"></div>
+	<div id="button-wait"></div>
+	<div class="alignement blue-button" id="button-reset-data">Reset data</div>
+	<div class="alignement blue-button" id="button-preview-data">Preview data</div>
+	<div class="alignement blue-button" id="button-load-demo-data">Load demo data</div>
+</div>
+</div>
+				<div id="inputs-description-tab">
+
+
+
+<script>
+
+	$(document).ready(function(){
+		
+		$('#table-input-description').dataTable({
+			"aaSorting": [[ 0, "asc" ]],
+			"sDom": 'rt<"clear">',
+			"oLanguage" : {
+				"sEmptyTable": 'No data available'
+			},
+			"bAutoWidth": false,
+			"aoColumnDefs": [
+				{"sWidth": "150px", "aTargets": [0]},
+				{"sWidth": "250px", "aTargets": [1]}
+				],
+			"bFilter" : false,
+	 		"iDisplayLength": 100
+		});
+		
+	});
+
+</script>
+
+
+<div class="table-title-black" ><p>Inputs and Inputs description</p></div>
+
+<div class="div-table-white">
+
+	<table id="table-input-description" class="table">
+	
+		<thead>
+			<tr>
+				<th>Variable/Parameters</th>
+				<th>Description, constraint</th>
+				<th>Comments</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			
+				<tr>
+					<td>Correction for equivalent income</td>
+					<td><ul id="description-815"></ul></td>
+					<td>The living conditions used to compute corrections.</td>
+				</tr>
+			
+				<tr>
+					<td>Discount factor</td>
+					<td><ul id="description-824"></ul></td>
+					<td>The annual discount factor. With a high discount factor international corrections for unemployment risk and life expectancy are smaller.</td>
+				</tr>
+			
+				<tr>
+					<td>Coefficient of Relative Risk Aversion</td>
+					<td><ul id="description-823"></ul></td>
+					<td>The coefficient of relative risk aversion. A large CRRA implies large corrections for life expectancy and unemployement risk.</td>
+				</tr>
+			
+				<tr>
+					<td>Unemployment stigma</td>
+					<td><ul id="description-825"></ul></td>
+					<td>The stigma of being unemployed. </td>
+				</tr>
+			
+				<tr>
+					<td>Household scale</td>
+					<td><ul id="description-837"></ul></td>
+					<td>The coefficient in the household size correction. It is the coefficient of economies in scale in households, or more intuitively the share of consumption concerned by those economies of scale (housing and food costs, some insurances, sharing of a car…)</td>
+				</tr>
+			
+				<tr>
+					<td>Social preference for equality</td>
+					<td><ul id="description-831"></ul></td>
+					<td>The coefficient of social preference for equality.</td>
+				</tr>
+			
+		</tbody>
+		
+	</table>
+	
+</div>
+		</div>
+				<div id="demo-data-description-tab">
+
+
+
+<script>
+
+	/**
+	 * permet d inserer les donnes extraites d un fichier csv
+	 * dans la variable options pour highchart 
+	 * @param options : les options de highchart
+	 * @param data decrivant le fichier csv != donnes retournees de la requete ajax 
+	 * @returns options
+	 */
+	function getSeries(options, data) {
+		// Split the lines
+	    var lines = data.split('\n');
+	    
+	    // Iterate over the lines and add categories or series
+	    $.each(lines, function(indexLines, line) {
+	        var items = line.split(',');
+	        if (indexLines == 0) {
+	        	options.title.text = line;
+	        } else {
+	        	var series = {
+	        		data: []
+	        	};
+	        	$.each(items, function(indexItems, value) {
+	        		if (indexLines == 1) {
+	        			series.color = '#4572A7';
+	        		}
+	        		if (indexItems == 0) {
+	        			series.name = value;
+	        		} else {
+	        			series.data.push(parseFloat(value));
+	        		}
+	        	});
+	        	options.series.push(series);
+	        }
+	    });
+	    return options;
+	}
+
+	/**
+	 * Affiche les graph dans l onglet demo data description
+	 * @param data
+	 * @param containerName le nom de l'id du conteneur dans la jsp
+	 * @param color de fond du graphique
+	 */
+	function displayGraphDemoDataDescription(data, containerName) {
+		var options = {	
+			chart : {
+				backgroundColor: 'none',
+				borderColor : '#3a3a3a',
+				renderTo : containerName,
+				defaultSeriesType : 'line',
+				borderWidth: 1,
+				borderRadius : 5,
+		        marginRight: 15,
+		        marginLeft: 40,
+		        marginBottm: 5,
+		        style: {
+		        	fontFamily: 'Arial, Helvetica, Verdana, sans-serif',
+		        	fontSize: '10px'
+		        }
+			},
+			title : {
+				x : -20
+			//center
+			},
+			subtitle : {
+				text : null,
+				x : -20
+			},
+			xAxis : {
+				title : null,
+				lineColor : '#3a3a3a',
+				lineWidth: 1,
+				labels: {
+					style: {
+			        	fontFamily: 'Arial, Helvetica, Verdana, sans-serif',
+			        	fontSize: '10px',
+			        	color : '#3a3a3a'
+			        }
+		        }
+			},
+			yAxis : {
+				title : null,
+				lineColor : '#3a3a3a',
+				lineWidth: 1,
+				labels: {
+					style: {
+			        	fontFamily: 'Arial, Helvetica, Verdana, sans-serif',
+			        	fontSize: '10px',
+			        	color : '#3a3a3a'
+			        }
+		        }
+			},
+			navigation: {
+		        buttonOptions: {
+		            enabled: false
+		        }
+		    },
+			tooltip : {
+				enabled : false
+			},
+			plotOptions : {
+				series : {
+					lineWidth : 1,
+					animation : false,
+					enableMouseTracking: false,
+					shadow : false,
+					marker : {
+						enabled : false
+					},
+					states : {
+						hover : {
+							enabled : false
+						}
+					}
+				}
+			},
+			credits : {
+				enabled : false
+			},
+			legend : {
+				layout : 'vertical',
+				align : 'center',
+				verticalAlign : 'top',
+				x : 0,
+				y : -10,
+				borderWidth : 0,
+				margin : 20,
+				itemStyle: {
+					cursor: 'pointer',
+					color: '#3a3a3a',
+					fontFamily: 'Arial, Helvetica, Verdana, sans-serif',
+					fontSize: '10px'
+				},
+				itemHoverStyle: {
+					color: '#3a3a3a'
+				}
+			},
+			series : []
+		};
+		options = getSeries(options,data[0].results);
+		var chart = new Highcharts.Chart(options);
+	}
+
+	/**
+	 * recupere une chaine de caracter formate pour la generation d une courbe highchart
+	 */
+	function getDemoDataDescription(siteId, inputId, inputName) {
+		var url = "ajaxDemoDataDescription.do";
+		var type =  "POST";
+		var dataType = "json";
+		var params = {};
+		params["siteId"] = siteId;
+		params["inputId"] = inputId;
+		params["inputName"] = inputName;
+		var displaySuccess = function(data) {displayGraphDemoDataDescription(data, 'container-demo-data-description-' + inputId);};
+		var displayError = function() {addMessage(errorMessage5, 1, "div-message");};
+	    $.ajax({url : url , type : type,async: false , dataType : dataType , data : params , success: displaySuccess , error : displayError});
+	}
+
+	$(document).ready(function(){
+		$('#table-demo-data-description').dataTable({
+			"aaSorting": [[ 0, "asc" ]],
+			"sDom": 'rt<"clear">',
+			"oLanguage" : {
+				"sEmptyTable": 'No data available'
+			},
+			"bAutoWidth": false,
+			"aoColumnDefs": [
+				{"sWidth": "150px", "aTargets": [0]},
+				{"sWidth": "250px", "aTargets": [1]},
+				{"sWidth": "250px", "aTargets": [2], "bSortable":false}
+				],
+			"bFilter" : false,
+	 		"iDisplayLength": 100
+		});
+		
+		
+			
+				
+				
+					$("#container-demo-data-description-815").hide();
+				
+			
+		
+			
+				
+				
+					$("#container-demo-data-description-824").hide();
+				
+			
+		
+			
+				
+				
+					$("#container-demo-data-description-823").hide();
+				
+			
+		
+			
+				
+				
+					$("#container-demo-data-description-825").hide();
+				
+			
+		
+			
+				
+				
+					$("#container-demo-data-description-837").hide();
+				
+			
+		
+			
+				
+				
+					$("#container-demo-data-description-831").hide();
+				
+			
+		
+	});
+
+</script>
+
+<div class="table-title-black" >
+	<p>Inputs and inputs description</p>
+</div>
+<div class="div-table-white">
+
+	
+		<div class="download" style="margin:0 377px 20px 0;">
+			<a href="/data/MetaSite/upload/companionSite71/data/data-demo.csv">
+				<img src="images/icones/arrowDownload.png">
+				<span>Download demo data</span>
+			</a>
+		</div>
+	
+	
+	<table id="table-demo-data-description" class="table">
+	
+		<thead>
+			<tr>
+				<th>Variable/Parameters</th>
+				<th>Description</th>
+				<th style="text-align: center;">Visualisation</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			
+				<tr>
+					<td>Correction for equivalent income</td>
+					<td>We compute corrections by using the following living conditions: consumption prices, labor, risk of unemployment,
+health, household composition and inequalities.</td>
+					<td align="center">
+						
+						
+					</td>
+				</tr>
+			
+				<tr>
+					<td>Discount factor</td>
+					<td>The annual discount factor equals 0.03.</td>
+					<td align="center">
+						
+						
+					</td>
+				</tr>
+			
+				<tr>
+					<td>Coefficient of Relative Risk Aversion</td>
+					<td>We use a coefficient of risk aversion equal to 0.8.</td>
+					<td align="center">
+						
+						
+					</td>
+				</tr>
+			
+				<tr>
+					<td>Unemployment stigma</td>
+					<td>The stigma of being unemployed translates into replacement rates 20 percentage
+points below the observed replacement rate.</td>
+					<td align="center">
+						
+						
+					</td>
+				</tr>
+			
+				<tr>
+					<td>Household scale</td>
+					<td>The coefficient in the household size correction is 0.5.</td>
+					<td align="center">
+						
+						
+					</td>
+				</tr>
+			
+				<tr>
+					<td>Social preference for equality</td>
+					<td>The coefficient of social preference for equality is 1.5.</td>
+					<td align="center">
+						
+						
+					</td>
+				</tr>
+			
+		</tbody>
+		
+	</table>
+	
+</div>
+</div>
+				<div id="results-tab">
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		
+		
+	});
+	
+</script>
+
+
+<div class="table-title-black">
+	<p class="center">Results</p>
+</div>
+
+<div class="div-table-white">
+	
+		<div style="height: 55px;width: 100%;text-align: center;">
+			<div class="georgia green h18 italic">
+				International Comparisons of Living Standards by Equivalent Incomes<br/>
+				
+					
+				
+					
+						M.
+					
+					
+					
+					Fleurbaey,
+					and
+				
+					
+				
+					
+						G.
+					
+					
+					
+					Gaulier
+					
+				
+				(2012)<br/>
+			</div>
+		</div>
+	
+
+	<div id="resultats">
+
+
+
+
+
+
+<script type="text/javascript">
+
+	function getResultPdf(src){
+		var html = '<iframe src="' + src + '" id="iFrameResultatObject" frameborder="0" width="700" height="700"></iframe>';
+		$("#visualisation-fichier-resultat").html(html);
+		
+		$("#liste-fichiers-resultat a").removeClass("active");
+		$("#get-result-pdf").addClass("active");
+	}
+	
+	function getResultPage(id){
+		$("#visualisation-fichier-resultat").html("");
+		$("#liste-fichiers-resultat a").removeClass("active");
+		$("#link-page-" + id).addClass("active");
+		$("#visualisation-fichier-resultat").html($("#page-" + id).html());
+	}
+	
+	function getTable(datas, title_table, nb_line, nb_column){
+		var html = '<h3>' + title_table + '</h3><table align="center"><tbody>';
+		var lines = datas.split("\n");
+		for(var i = 0; i < nb_line; i++){
+			if(i < lines.length){
+				if(i==0) html += '<tr class="title">';
+				else if(i%2 == 1) html += '<tr class="odd">';
+				else html += '<tr class="even">';
+				
+				var columns = lines[i].split(";");
+				for(var j = 0; j < nb_column; j++){
+					if(j < columns.length){
+						if(j==0) html += '<td class="title">' + columns[j] + '</td>';
+						else if(j%2 == 1) html += '<td class="odd">' + columns[j] + '</td>';
+						else html += '<td class="even">' + columns[j] + '</td>';
+					}else{
+						if(j==0) html += '<td class="title"></td>';
+						else if(j%2 == 1) html += '<td class="odd"></td>';
+						else html += '<td class="even"></td>';
+					}
+				}
+				html += "</tr>";
+			}
+		}
+		html += "</tbody></table>";
+		return html;
+	}
+	
+	function getChart(id, datas, type, title){
+		var series = new Array();
+		var lines = datas.split("\n");
+		for(var i = 0; i+1 < lines.length; i++){
+			var data = new Array();
+			var columns = lines[i+1].split(";");
+			for(var j = 0; j < columns.length; j++) data.push(parseFloat(columns[j]));
+			var serie = {name: lines[i], data: data};
+			series.push(serie);
+			i++;
+		}
+		
+		var chart = new Highcharts.Chart({
+			title: {
+                text: title,
+                x: -20 //center
+            },
+            credits : {
+				enabled : false
+			},
+            chart: {
+                renderTo: id,
+                type: type
+            },
+            series: series
+        });
+	}
+
+	$(document).ready(function(){
+		
+		var resultat = "";
+		
+		
+			
+			
+				resultat = '/data/MetaSite/upload/companionSite71/data/demo-result.pdf';
+			
+		
+		
+		
+		if(resultat == "") $("#get-result-pdf").hide();
+		
+		$("#get-result-pdf").click(function(){
+			getResultPdf(resultat);
+			return false;
+		});
+				
+		if(resultat != "") $("#get-result-pdf").parent().after('<li><a id="download-result-pdf" href="' + resultat + '">Download result.pdf</a></li>');
+		
+		$.ajax({
+	        url: resultat + '&type=tgz', 
+	        method: 'post',
+	        async: false,
+	        success: function(data){
+	        	if(data != "NOT-OK") $("#download-result-pdf").parent().after('<li><a id="get-result-tgz" href="' + resultat + '&type=tgz">Download result.tgz</a></li>');	
+	        }
+	    });
+		
+		getResultPdf(resultat);
+		
+		
+		
+		
+		
+	});
+
+</script>
+
+<div id="resultats">
+
+	<div id="liste-fichiers-resultat">
+	
+		<ul>
+			<li><a id="get-result-pdf" href="#">result.pdf</a></li>
+		</ul>
+		
+		
+	
+	</div>
+	
+	<div id="visualisation-fichier-resultat"></div>
+
+</div>
+
+
+
+
+<div class="clear"></div>
+</div>
+	
+</div>
+</div>
+				<div id="site-computing-queue-tab">
+
+
+
+<script>
+
+	$(document).ready(function(){
+		
+		$('#table-list-tasks').dataTable({
+			"aaSorting": [[ 0, "asc" ]],
+			"sDom": 'rt<"clear">',
+			"oLanguage" : {
+				"sEmptyTable": 'No data available'
+			},
+			"bAutoWidth": false,
+			"aoColumnDefs": [
+				{"sWidth": "120px", "aTargets": [0]},
+				{"sWidth": "80px", "aTargets": [2]}
+				],
+			"bFilter" : false,
+	 		"iDisplayLength": 100
+		});
+		
+	});
+
+</script>
+
+
+<div class="table-title-black" ><p>Computing queue</p></div>
+
+<div class="div-table-white">
+
+	<table id="table-list-tasks" class="table">
+	
+		<thead>
+			<tr>
+				<th>Computing Date</th>
+				<th>Status</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+
+		<tbody id="site-computing-queue-tbody"></tbody>
+		
+	</table>
+	
+</div>
+		</div>
+			</div><!-- #end cs-tab-bottom -->
+		
+	</div>
+	
+	
+		<div id="coders-tab">
+			
+
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		
+			
+		
+			$('#table-coder-144').dataTable({
+				"sPaginationType": "full_numbers",
+				"aaSorting": [[ 0, "asc" ]],
+				"sDom": '<"top"i>rt<"clear">',
+				"oLanguage" : {
+					"sEmptyTable": "No data available"
+				},
+				"bAutoWidth": false,
+				"aaSorting": [[ 0, "asc" ]],
+				"aoColumnDefs": [
+						{sType: "string", "sWidth": "250px", "aTargets": [0]},
+						{sType: "string", "sWidth": "100px","aTargets": [1]},
+						{sType: "string", "sWidth": "100px","aTargets": [2]},
+						{sType: "date", "aTargets": [3]},
+						{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+						{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+						{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+					],
+				"bFilter" : false,
+				// select number of rows in table
+				"aLengthMenu" : [5, 10, 15, 20]
+			});
+		
+			
+		
+			$('#table-coder-56').dataTable({
+				"sPaginationType": "full_numbers",
+				"aaSorting": [[ 0, "asc" ]],
+				"sDom": '<"top"i>rt<"clear">',
+				"oLanguage" : {
+					"sEmptyTable": "No data available"
+				},
+				"bAutoWidth": false,
+				"aaSorting": [[ 0, "asc" ]],
+				"aoColumnDefs": [
+						{sType: "string", "sWidth": "250px", "aTargets": [0]},
+						{sType: "string", "sWidth": "100px","aTargets": [1]},
+						{sType: "string", "sWidth": "100px","aTargets": [2]},
+						{sType: "date", "aTargets": [3]},
+						{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+						{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+						{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+					],
+				"bFilter" : false,
+				// select number of rows in table
+				"aLengthMenu" : [5, 10, 15, 20]
+			});
+		
+			
+		init();
+		
+		//Evenement en cliquant sur l icone suivant
+		$(".suivant").click( function() {
+			
+			if ($(".coder").length > 5) {
+				var initPositionUL = 280;
+				var nextPositionLeft = "";
+				if ($(".selected-picture").html() != $(".coder").last().html()) {
+					nextPositionLeft = ($("#carrousel > ul").position().left - 140);
+				} else {
+					nextPositionLeft = initPositionUL;
+				}
+				$("#carrousel").children().css({left:nextPositionLeft});
+			}
+			
+			var nextElement ="";
+			// Recherche de l element frere
+			if ($(".selected-picture").html() != $(".coder").last().html()) {
+				nextElement = $(".selected-picture").parent().next("li").children();
+			} else {
+				nextElement =  $(".coder").first();
+			}
+			$(".selected-picture > div").last().css({display:"none"});
+			$(".coder").removeClass("selected-picture");
+			nextElement.addClass("selected-picture");
+			$(".selected-picture > div").last().css({display:"block"});
+			$(".memberTable").css({display:"none"});
+			$("#" + nextElement.attr("id")+"Table").css({display:"block"});
+			
+		});
+		
+		//Evenement en cliquant sur l icone precedent
+		$(".precedent").click( function() {
+			
+			if ($(".coder").length > 5) {
+				var initPositionUL = 280;
+				var nextPositionLeft = "";
+				if ($(".selected-picture").html() != $(".coder").first().html()) {
+					nextPositionLeft = $("#carrousel > ul").position().left + 140;
+				} else {
+					nextPositionLeft = initPositionUL - (140)*($(".coder").length-1);
+				}
+	
+				$("#carrousel > ul").css({left:nextPositionLeft});
+			}
+			var prevElement ="";
+			// Recherche de l element frere
+			if ($(".selected-picture").html() != $(".coder").first().html()) {
+				prevElement = $(".selected-picture").parent().prev("li").children();
+			} else {
+				prevElement =  $(".coder").last();
+			}
+			$(".selected-picture > div").last().css({display:"none"});
+			$(".coder").removeClass("selected-picture");
+			prevElement.addClass("selected-picture");
+			$(".selected-picture > div").last().css({display:"block"});
+			$(".memberTable").css({display:"none"});
+			$("#" + prevElement.attr("id")+"Table").css({display:"block"});
+			
+		});
+		
+		//Evenement en cliquant sur la photo d un coder
+		$(".coder").click( function() { 
+			if ($(".coder").length > 5) {
+				var initPositionUL = 280;
+				var nextPositionLeft = "";
+				nextPositionLeft = initPositionUL - $(".coder").index(this)*140 + "px";
+				$("#carrousel > ul").css({left:nextPositionLeft});
+			}
+			
+			$(".selected-picture > div").last().css({display:"none"});
+			$(".coder").removeClass("selected-picture");
+			$(this).addClass("selected-picture");
+			$(".selected-picture > div").last().css({display:"block"});
+			$(".memberTable").css({display:"none"});
+			$("#" + $(this).attr("id")+"Table").css({display:"block"});
+			
+		} );
+	});
+
+	function init() { 
+		
+		// initialisation carrousel
+		$("#carrousel").css({postion:"relative"});
+		
+		// Effacement de tous les tableaux
+		$(".memberTable").css({display:"none"});
+		
+		// Selection du coder (le troisieme par defaut si plus de 5 coders)
+		var selectedElement = "";
+		if ($(".coder").length < 5) {
+			if ($(".coder").length % 2 === 0) {
+				selectedElement = $(".coder").get($(".coder").length/2 -1);
+			} else {
+				selectedElement = $(".coder").get(($(".coder").length-1)/2);
+			}
+		} else {
+				selectedElement = $(".coder").get(2);
+		}
+		$("#" + selectedElement.id).addClass("selected-picture");
+	 	$("#" + selectedElement.id + "Table").css({display:"block"});
+		$(".selected-picture > div").last().css({display:"block"});
+		
+		// Centrage du ul par rapport à la div en calculant la taille + ajout d une marge
+		if ($(".coder").length < 5) {
+			var ulSize = ($(".coder").parent().width())*5;
+			$("#carrousel").children("ul").css({width:ulSize});
+			var marginLeft = (($(".coder").parent().width())*5-$(".coder").length*140)/($(".coder").length+1);
+			$("#carrousel").children("ul").children("li").css({marginLeft:marginLeft});
+		} else {
+			$("#carrousel").css({position:"relative"});
+			$("#carrousel").children("ul").css({position:"relative"});
+		}
+	
+	}
+</script>
+
+
+
+	<div id="top-carrousel">
+		<div class="float-left">
+			Coders:
+		</div>
+		<div class="suivant"><img src="images/buttons/arrowButtonRightOn.gif"/></div>
+		<div class="precedent"><img src="images/buttons/arrowButtonLeftOn.gif"/></div>
+	</div>
+
+
+
+<div id="wrapper-carrousel">
+	<div id="carrousel">
+		<ul>
+			
+				
+				
+				<li>
+					<div id="Fleurbaey" class="coder">
+						
+							
+								<img class="picture" src="/data/MetaSite/upload/mfleurbaey/bd61c2f2afcf33b531020fa023f86ed74d94b8da.jpg">
+							
+							
+						
+						<div class="content-carrousel">
+							<p class="name">
+								Marc
+								 
+								Fleurbaey 
+							</p>
+							<p class="affiliation">
+								Princeton University 
+								
+							</p>
+							<p class="country">
+								United States
+							</p>
+						</div>
+						<div class="link-carrousel" style="display: none;">
+							<a class="link" href="coders.do?action=infos&id=144">
+								Coder Page
+							</a> 
+							<img src="images/icones/smallLogoRMC.png" height="14px" width="15px">
+						</div>
+					</div>
+				</li>
+			
+				
+				
+				<li>
+					<div id="Gaulier" class="coder">
+						
+							
+								<img class="picture" src="/data/MetaSite/upload/ggaulier/2acbf4794af8f753d2c75683da75ac0c59b059ef.png">
+							
+							
+						
+						<div class="content-carrousel">
+							<p class="name">
+								Guillaume
+								 
+								Gaulier 
+							</p>
+							<p class="affiliation">
+								Banque de France
+								
+							</p>
+							<p class="country">
+								France
+							</p>
+						</div>
+						<div class="link-carrousel" style="display: none;">
+							<a class="link" href="coders.do?action=infos&id=56">
+								Coder Page
+							</a> 
+							<img src="images/icones/smallLogoRMC.png" height="14px" width="15px">
+						</div>
+					</div>
+				</li>
+			
+		</ul>
+	</div>
+</div>
+<div id="bottom-carrousel"></div>
+
+	
+
+	<div id="FleurbaeyTable" class="memberTable">
+		<div class="table-title-black">
+			<p>
+				Marc
+				
+				Fleurbaey
+				also created these companion sites
+			</p>
+		</div>
+		<table id="table-coder-144" class="table">
+			<thead>
+				<tr>
+					<th style="text-align: center;">Article</th>
+					<th>Authors</th>
+					<th>Coders</th>
+					<th style="text-align: center;">Last update</th>
+					<th style="text-align: center;">Ranking</th>
+					<th style="text-align: center;">Visits</th>
+					<th style="text-align: center;">Runs</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					
+				
+					
+				
+			</tbody>
+		</table>
+	</div>
+
+	
+
+	<div id="GaulierTable" class="memberTable">
+		<div class="table-title-black">
+			<p>
+				Guillaume
+				
+				Gaulier
+				also created these companion sites
+			</p>
+		</div>
+		<table id="table-coder-56" class="table">
+			<thead>
+				<tr>
+					<th style="text-align: center;">Article</th>
+					<th>Authors</th>
+					<th>Coders</th>
+					<th style="text-align: center;">Last update</th>
+					<th style="text-align: center;">Ranking</th>
+					<th style="text-align: center;">Visits</th>
+					<th style="text-align: center;">Runs</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					
+				
+					
+				
+			</tbody>
+		</table>
+	</div>
+
+		</div>
+		<div id="similar-site-tab">
+			
+
+
+
+
+<script>
+$(document).ready(function(){
+
+	$('#table-relative-on-same-paper').dataTable({
+		"sPaginationType": "full_numbers",
+		"aaSorting": [[ 0, "asc" ]],
+		"sDom": '<"top"i>rt<"clear">',
+		oLanguage : {
+			"sEmptyTable": "No data available"
+		},
+		"bAutoWidth": false,
+		"aaSorting": [[ 0, "asc" ]],
+		"aoColumnDefs": [ // taille des colonnes
+                {sType: "string", "sWidth": "250px", "aTargets": [0]},
+				{sType: "string", "sWidth": "100px","aTargets": [1]},
+				{sType: "string", "sWidth": "100px","aTargets": [2]},
+				{sType: "date", "aTargets": [3]},
+				{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+				{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+				{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+			],
+		bFilter : false,
+		// select number of rows in table
+		aLengthMenu : [5, 10, 15, 20]
+	});
+	
+	$('#table-relative-to-similar-paper').dataTable({
+		"sPaginationType": "full_numbers",
+		"aaSorting": [[ 0, "asc" ]],
+		"sDom": '<"top"i>rt<"clear">',
+		oLanguage : {
+			"sEmptyTable": "No data available"
+		},
+		"bAutoWidth": false,
+		"aaSorting": [[ 0, "asc" ]],
+		"aoColumnDefs": [
+				{sType: "string", "sWidth": "250px", "aTargets": [0]},
+				{sType: "string", "sWidth": "100px","aTargets": [1]},
+				{sType: "string", "sWidth": "100px","aTargets": [2]},
+				{sType: "date", "aTargets": [3]},
+				{sType: "html-numeric", "sWidth": "70px", "aTargets": [4]},
+				{sType: "html-numeric", "sWidth": "60px", "aTargets": [5]},
+				{sType: "html-numeric", "sWidth": "6px", "aTargets": [6]}
+			],
+		bFilter : false,
+		// select number of rows in table
+		aLengthMenu : [5, 10, 15, 20]
+	});
+	
+});
+</script>
+
+<div class="table-title-black" >
+	<p>Other Companion Sites on same paper</p>
+</div>
+<div style="margin-bottom: 20px;">
+	<table id="table-relative-on-same-paper" class="table">
+		<caption>
+			International Comparisons of Living Standards by Equivalent Incomes
+		</caption>
+		<thead>
+			<tr>
+				<th style="text-align: center;">Article</th>
+				<th>Authors</th>
+				<th>Coders</th>
+				<th style="text-align: center;">Last update</th>
+				<th style="text-align: center;">Ranking</th>
+				<th style="text-align: center;">Visits</th>
+				<th style="text-align: center;">Runs</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			
+				
+			
+
+		</tbody>
+	</table>
+</div>
+<div class="table-title-black">
+	<p>Other Companion Sites relative to similar papers</p>
+</div>
+<div>
+	<table id="table-relative-to-similar-paper" class="table">
+		<thead>
+			<tr>
+				<th style="text-align: center;">Article</th>
+				<th>Authors</th>
+				<th>Coders</th>
+				<th style="text-align: center;">Last update</th>
+				<th style="text-align: center;">Ranking</th>
+				<th style="text-align: center;">Visits</th>
+				<th style="text-align: center;">Runs</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			
+				
+					<tr>
+						<td>
+							<div style="width: 230px; float: left; position: relative;">
+								<a href="site.do?siteId=70">How To Evaluate an Early Warning System? Towards a unified Statistical Framework for Assessing Financial Crises Forecasting Methods</a><br/>
+								<div class="loupe">
+									<a href="#abstractPaper-70" rel="abstractPaper70" title="Details of the article">
+										<img alt="" src="images/icones/loupe.gif" />
+									</a>
+									<!-- Abstract publication -->
+									<div id="abstractPaper-70" class="abstract-paper">
+										<div class="top-abstract-paper">
+											<div class="top-left-abstract-paper">Abstract</div>
+											<div class="top-right-abstract-paper">Close</div>
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="middle-abstract-paper">
+											<!-- description du site -->
+											This paper proposes an original and unified toolbox to evaluate financial crisis Early
+Warning Systems (EWS). It presents four main advantages. First, it is a model-free method
+which can be used to asses the forecasts issued from different EWS (probit, logit, markov
+switching models, or combinations of models). Second, this toolbox can be applied to any
+type of crisis EWS (currency, banking, sovereign debt, etc.). Third, it does not only provide various criteria to evaluate the (absolute) validity of EWS forecasts but also proposes some tests to compare the relative performance of alternative EWS. Fourth, our toolbox can be used to evaluate both in-sample and out-of-sample forecasts. Applied to a logit model for twelve emerging countries we show that the yield spread is a key variable for predicting currency crises exclusively for South-Asian countries. Besides, the optimal cut-off correctly allows us to identify now on average more than 2/3 of the crisis and calm periods.
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="bottom-abstract-paper">
+											
+												
+											
+												
+													
+													
+														Candelon,
+														
+														B.,
+													
+													
+													
+												
+											
+												
+											
+												
+													
+													
+													
+													
+														E.
+														
+														Dumitrescu,
+													
+												
+											
+												
+											
+												
+													
+													
+													
+														and
+														C.
+														
+														Hurlin,
+													
+													
+												
+											
+											"How To Evaluate an Early Warning System? Towards a unified Statistical Framework for Assessing Financial Crises Forecasting Methods",
+											
+												
+												
+													<i>IMF Economic Review</i>, 60.
+													<br/>
+												
+												
+												
+											
+											<div>
+												<a class="link" target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2021703">Access to full paper</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td>
+							
+								
+								Candelon<br/>
+							
+								
+								Dumitrescu<br/>
+							
+								
+								Hurlin<br/>
+							
+						</td>
+						
+						<td>
+							
+								
+								Candelon<br/>
+							
+								
+								Dumitrescu<br/>
+							
+								
+								Hurlin<br/>
+							
+						</td>
+						<td class="td-center-grey">07/23/2012</td>
+						
+						<td class="td-center-grey">
+							
+							
+								
+									
+										<span>34</span>
+									
+									
+								
+							
+						</td>
+						
+						<td class="td-center-grey">
+							
+								
+									
+										<span>269</span>
+									
+									
+								
+							
+
+							
+							
+								
+									
+									
+								
+							
+						</td>
+
+						<td class="td-center-grey">
+							
+		
+							
+								
+									
+										<span>23</span>
+									
+									
+								
+							
+						</td>
+						
+					</tr>
+				
+			
+				
+			
+				
+					<tr>
+						<td>
+							<div style="width: 230px; float: left; position: relative;">
+								<a href="site.do?siteId=81">Currency Crises Early Warning Systems: why they should be Dynamic</a><br/>
+								<div class="loupe">
+									<a href="#abstractPaper-81" rel="abstractPaper81" title="Details of the article">
+										<img alt="" src="images/icones/loupe.gif" />
+									</a>
+									<!-- Abstract publication -->
+									<div id="abstractPaper-81" class="abstract-paper">
+										<div class="top-abstract-paper">
+											<div class="top-left-abstract-paper">Abstract</div>
+											<div class="top-right-abstract-paper">Close</div>
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="middle-abstract-paper">
+											<!-- description du site -->
+											This paper introduces a new generation of Early Warning Systems (EWS) which takes into
+account the dynamics, i.e. the persistence in the binary crisis indicator. We elaborate on
+Kauppi and Saikonnen (2008), which allows to consider several dynamic specifications by re-
+lying on an exact maximum likelihood estimation method. Applied so as to predict currency
+crises for fifteen countries, this new EWS turns out to exhibit significantly better predic-
+tive abilities than the existing models both within and out of the sample, thus vindicating
+dynamic models in the quest for optimal EWS.
+										</div>
+										<div class="abstract-separate-line"></div>
+										<div class="bottom-abstract-paper">
+											
+												
+											
+												
+													
+													
+														Candelon,
+														
+														B.,
+													
+													
+													
+												
+											
+												
+											
+												
+													
+													
+													
+													
+														E.
+														
+														Dumitrescu,
+													
+												
+											
+												
+											
+												
+													
+													
+													
+														and
+														C.
+														
+														Hurlin,
+													
+													
+												
+											
+											"Currency Crises Early Warning Systems: why they should be Dynamic",
+											
+												
+												
+												
+												
+													<i>Maastricht University</i>.
+													<br/>
+												
+											
+											<div>
+												<a class="link" target="_blank" href="http://ideas.repec.org/p/dgr/umamet/2010047.html">Access to full paper</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td>
+							
+								
+								Candelon<br/>
+							
+								
+								Dumitrescu<br/>
+							
+								
+								Hurlin<br/>
+							
+						</td>
+						
+						<td>
+							
+								
+								Candelon<br/>
+							
+								
+								Dumitrescu<br/>
+							
+								
+								Hurlin<br/>
+							
+						</td>
+						<td class="td-center-grey">06/04/2012</td>
+						
+						<td class="td-center-grey">
+							
+							
+								
+									
+										<span>45</span>
+									
+									
+								
+							
+						</td>
+						
+						<td class="td-center-grey">
+							
+								
+									
+										<span>112</span>
+									
+									
+								
+							
+
+							
+							
+								
+									
+									
+								
+							
+						</td>
+
+						<td class="td-center-grey">
+							
+		
+							
+								
+									
+										<span>45</span>
+									
+									
+								
+							
+						</td>
+						
+					</tr>
+				
+			
+
+		</tbody>
+	</table>
+</div>
+
+
+		</div>
+		<div id="faq-tab">
+			
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#refresh-captcha").unbind("click");
+		$("#refresh-captcha").click(function(){
+			var date = new Date();
+			$("#form-add-faq-captcha-img").attr("src","captcha.do?action=image&time=" + date.getTime());
+			return false;
+		});
+		
+		
+		// initialisation de la partie faq
+		$(".response").css({display:"none"});
+		$(".question").children('img').attr('src','images/icones/more.png');
+		$(".question").children('span').css({color:"#3a3a3a"});
+		
+		// onClick Evenement
+		$(".question").each( function (i) {
+			$(this).bind("click",function(){
+				if ($(this).children('img').attr('src') == 'images/icones/more.png'){
+					$(this).css({borderBottom:"1px solid #dadada"});
+					$(this).children('img').attr('src','images/icones/less.png');
+					$(this).parent('div').children('.response').show();
+					$(this).children('span').css({color:"#46b21e"});
+				} else {
+					$(this).children('img').attr('src','images/icones/more.png');
+					$(this).css({borderBottom:"none"});
+					$(this).parent('div').children('.response').hide();
+					$(this).children('span').css({color:"#3a3a3a"});
+				}
+				}
+			);
+		});
+		
+		//onMouseOver Evenement
+		$(".question").each( function (i) {
+			$(this).hover(function(){
+				if ($(this).children('img').attr('src') == 'images/icones/more.png'){
+					$(this).children('span').css({color:"#46b21e"});
+				}
+				$(this).addClass('hover');
+			},function() {
+				if ($(this).children('img').attr('src') == 'images/icones/more.png'){
+					$(this).children('span').css({color:"#3a3a3a"});
+				}
+				$(this).removeClass('hover');
+			});
+		});	
+		
+		
+		$("#form-add-faq-button-submit").click(
+			function(){
+				if($("#textAreaQuestion").val() == ""){
+
+					$( "#dialog:ui-dialog" ).dialog( "destroy" );
+					
+					$("#dialog").html("Please enter a question.");
+					$("#dialog").dialog({
+						title: "Error",
+						dialogClass: "dialog-error",
+						resizable: false,
+						modal: true,
+						draggable: false,
+						buttons: {
+							"OK": function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					});
+					
+					return false;
+				}
+				
+				if($("#form-add-faq-captcha").val() == ""){
+					$( "#dialog:ui-dialog" ).dialog( "destroy" );
+					
+					$("#dialog").html("Please enter the security code written in the box.");
+					$("#dialog").dialog({
+						title: "Error",
+						dialogClass: "dialog-error",
+						resizable: false,
+						modal: true,
+						draggable: false,
+						buttons: {
+							"OK": function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					});
+					
+					return false;
+				}
+				
+				var ok = true;
+				$.ajax({
+					url: "captcha.do?action=check&captcha=" + $("#form-add-faq-captcha").val(),
+					async: false, 
+					success:
+						function(data){
+							if(data == "NOT-OK") ok = false;
+						}
+				});
+				
+				if(!ok){
+					$( "#dialog:ui-dialog" ).dialog( "destroy" );
+					
+					$("#dialog").html("The security code is not correct.");
+					$("#dialog").dialog({
+						title: "Error",
+						dialogClass: "dialog-error",
+						resizable: false,
+						modal: true,
+						draggable: false,
+						buttons: {
+							"OK": function() {
+								$( this ).dialog( "close" );
+							}
+						}
+					});
+					
+					return false;
+				}
+				
+				$.ajax({
+					url: "addFaq.do?captcha=" + $("#form-add-faq-captcha").val() + "&id=71" + "&question=" + $("#textAreaQuestion").val(),
+					async: false, 
+					success:
+						function(data){
+							if(data == "NOT-OK") ok = false;
+						}
+				});
+				
+				$("#textAreaQuestion").val("");
+				$("#form-add-faq-captcha").val("");
+
+				var date = new Date();
+				$("#form-add-faq-captcha-img").attr("src","captcha.do?action=image&time=" + date.getTime());
+				
+				$( "#dialog:ui-dialog" ).dialog( "destroy" );
+				
+				$("#dialog").html("Your question was sent.");
+				$("#dialog").dialog({
+					title: "Info",
+					dialogClass: "dialog-error",
+					resizable: false,
+					modal: true,
+					draggable: false,
+					buttons: {
+						"OK": function() {
+							$( this ).dialog( "close" );
+						}
+					}
+				});
+
+				return false;
+			}
+		);
+		
+	});
+	
+</script>
+
+<div class="table-title-black">
+	<p>Frequently Asked Questions</p>
+</div>
+
+<div id="faq">
+	
+	
+		<br/>
+		There isn't any question about this code.
+	
+</div>
+
+<div style="height: 30px; width: 100%;"></div>
+
+<div class="table-title-black" >
+	<p>Didn't find your answer ?</p>
+</div>
+
+<div style="text-align: left; width: 738px;background-color: #F4F4F4;padding:5px 15px 15px 15px;">
+	<label>Leave your question here:</label>
+	<textarea id="textAreaQuestion" style="height:72px; width: 100%"></textarea>
+	
+	<label>Please enter the security code written in the box:</label>
+	
+	<div>
+		<img src="captcha.do?action=image" alt="captcha" id="form-add-faq-captcha-img" />
+		<img src="img/refresh.jpg" id="refresh-captcha" alt="refresh" style="cursor: pointer;" />
+	</div>
+	
+	<input type="text" name="captcha" id="form-add-faq-captcha" />
+	
+	<div style="width: 100%; text-align: right;">
+		<a href="#" class="green-button" id="form-add-faq-button-submit">Submit</a>
+	</div>
+	
+</div>
+
+<script>
+	function resetTextAreaQuestion() {
+		document.getElementById("textAreaQuestion").value = "";
+	}
+</script>
+			
+		</div>
+	
+</div>
+
+				
+				<div style="clear: both"></div>
+				
+				<div id="dialog"></div>
+			</div>
+			
+			<div id="footer">
+
+
+<div id="copyright">
+	Copyright 2012 RunMyCode - v1.011
+</div>
+
+<div id="footer-link">	
+	   <a href="firstVisit.do">About</a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="http://www.runmycode.org/data/Privacy_Policy.pdf">Privacy Policy</a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="http://www.runmycode.org/data/Terms_of_Use.pdf">Terms of Use</a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="contact-us.do">Contact</a>		
+</div>
+
+<div id="partenaires">
+	<!-- <map name="image-map">
+		<area shape="rect" coords="7,8,83,86" href="http://www.cnrs.fr/index.php">
+		<area shape="rect" coords="93,8,198,86" href="http://www.hec.edu/">
+		<area shape="rect" coords="203,8,308,86" href="http://www.univ-orleans.fr/presentation/multilingue/?page=3">
+		<area shape="rect" coords="312,8,584,86" href="http://www.tge-adonis.fr/">
+		<area shape="rect" coords="588,8,752,86" href="http://cc.in2p3.fr/">
+	</map> 
+	<img usemap="#image-map" src="images/img/partenaires2.png"/>
+	 -->
+	 
+	 <a href="http://www.sloan.org/"><img src="img/logo-asf-g.png"/></a>
+	 <!-- a href="http://cc.in2p3.fr/"><img src="img/logo-ccin2p3-g.png"/></a -->
+	 <a href="http://www.tge-adonis.fr/"><img src="img/logo-tge-adonis-g.png"/></a>
+	 <a href="http://www.univ-orleans.fr/presentation/multilingue/?page=3"><img src="img/logo-univ-orleans-g.png"/></a>
+	 <a href="http://www.hec.edu/"><img src="img/logo-hec-g.png"/></a>
+	 <a href="http://www.cnrs.fr/index.php"><img src="img/logo-cnrs-g.png"/></a>
+	 
+</div>
+</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>

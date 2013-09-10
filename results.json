@@ -1,0 +1,173 @@
+[
+  {
+    "coders": {}, 
+    "title": "Adaptive Estimation of Vector Autoregressive Models with Time-Varying Variance: Application to Testing Linear Causality in Mean", 
+    "journal": "IRMAR-INSA and CREST ENSAI (2010)", 
+    "names": [
+      "Valentin Patilea"
+    ], 
+    "legacy_id": "62", 
+    "abstract": "Linear Vector AutoRegressive (VAR) models where the innovations could be unconditionally heteroscedastic and serially dependent are considered. The volatility structure is deterministic and quite general, including breaks or trending variances as special cases. In this framework we propose Ordinary Least Squares (OLS), Generalized Least Squares (GLS) and Adaptive Least Squares (ALS) procedures. The GLS estimator requires the knowledge of the time-varying variance structure while in the ALS approach the unknown variance is estimated by kernel smoothing with the outer product of the OLS residuals vectors. Different bandwidths for the different cells of the time-varying variance matrix are also allowed. We derive the asymptotic distribution of the proposed estimators for the VAR model coefficients and compare their properties. In particular we show that the ALS estimator is asymptotically equivalent to the infeasible GLS estimator. This asymptotic equivalence is obtained uniformly with respect to the bandwidth(s) in a given range and hence justifies data-driven bandwidth rules. Using these results we build Wald tests for the linear Granger causality in mean which are adapted to VAR processes driven by errors with a non stationary volatility. It is also shown that the commonly used standard Wald test for the linear Granger causality in mean is potentially unreliable in our framework (incorrect level and lower asymptotic power). Monte Carlo and real-data experiments illustrate the use of the different estimation approaches for the analysis of VAR models with time-varying variance innovations.", 
+    "explanatory_text": "The code provides Wald tests results for testing linear Granger causality in mean in the framework of VAR models with non constant variance. A summary on bandwidth selection and the minimum eigenvalues of the estimated volatilities is displayed. The series have to be centered before proceeding to the tests. Note that the adequacy of the VAR model has to be tested before using the modified portmanteau tests available on this companion website."
+  }, 
+  {
+    "coders": {}, 
+    "title": "Copula-Based Models for Financial Time Series", 
+    "journal": "Handbook of Financial Time Series, Springer Verlag (2009)", 
+    "names": [
+      "Andrew J. Patton"
+    ], 
+    "legacy_id": "63", 
+    "abstract": "This paper presents an overview of the literature on applications of copulas in the modelling of financial time series. Copulas have been used both in multivariate time series analysis, where they are used to charaterise the (conditional) cross-sectional dependence between individual time series, and in univariate time series analysis, where they are used to characterise the dependence between a sequence of observations of a scalar time series process. The paper includes a broad, brief, review of the many applications of copulas in finance and economics.", 
+    "explanatory_text": "This code estimates a dozen constant and time-varying copula functions for bivariate time-series (e.g. Normal, Clayton, Rotates Clayton, Plackett, Frank, Gumbel, Rotated Gumbel, Student, Symmetrised Joe-Clayton). These copulas are then compared by relying on criteria such as Log-likelihood, AIC or BIC. Besides, the code reports the plots for exceedence correlations, quantile dependence and the graphical comparison of the constant and the time-varying versions of three copulas, i.e. Normal, Gumbel and SJC. For the constant copulas, the level of tail dependence (Ldep and Udep) is also indicated."
+  }, 
+  {
+    "coders": {}, 
+    "title": "Mixed Logit with Repeated Choices: Households' Choices of Appliance Efficiency Level", 
+    "journal": "The Review of Economics and Statistics (1998)", 
+    "names": [
+      "David Revelt", 
+      "Kenneth Train"
+    ], 
+    "legacy_id": "64", 
+    "abstract": "Mixed logit models, also called random-parameters or error-components logit, are a generalization of standard logit that do not exhibit the restrictive \"independence from irrelevant alternatives\" property and explicitly account for correlations in unobserved utility over repeated choices by each customer. Mixed logits are estimated for households\u2019 choices of appliances under utility-sponsored programs that offer rebates or loans on high-efficiency appliances.", 
+    "explanatory_text": "This code estimates the parameters of mixed logit models, also called random-parameters or error-components logit. This model is a generalization of standard logit that does not exhibit the restrictive \"independence from irrelevant alternatives\" property and explicitly accounts for correlations in unobserved utility over repeated choices by each customer. The user can introduce explanatory variables associated with fixed and/or random coefficients. For random coefficients (RC), the user can choose a specific distribution for each parameter. The code displays estimated fixed coefficients, the estimated parameters of the RC distribution, standard errors and sampling covariance matrix, and the log-likelihood at convergence."
+  }, 
+  {
+    "coders": {
+      "Christophe Hurlin": {
+        "affiliation": "University of Orleans", 
+        "country": "France"
+      }, 
+      "Bertrand Candelon": {
+        "affiliation": "Maastricht University", 
+        "country": "Netherlands"
+      }, 
+      "Gilbert Colletaz": {
+        "affiliation": "University of Orleans", 
+        "country": "France"
+      }
+    }, 
+    "title": "Network Effects and Infrastructure Productivity in Developing Countries", 
+    "journal": "Maastricht University (2011)", 
+    "names": [
+      "Bertrand Candelon", 
+      "Gilbert Colletaz", 
+      "Christophe Hurlin"
+    ], 
+    "legacy_id": "65", 
+    "abstract": "This paper proposes to investigate the threshold effects of the productivity of infrastructure investment in developing countries within a panel data framework. Various speci.cations of an augmented production function that allow for endogenous thresholds are considered. The overwhelming outcome is the presence of strong threshold effects in the relationship between output and private and public inputs. Whatever the transition mechanism used, the testing procedures lead to strong rejection of the linearity of this relationship. In particular, the productivity of infrastructure investment generally exhibits some network effects. When the available stock of infrastructure is very low, investment in this sector has the same productivity as non-infrastructure investment. On the contrary, when a minimumnetwork is available, the marginal productivity of infrastructure investment is generally largely greater than the productivity of other investments. Finally, when the main network is achieved, its marginal productivity becomes similar to the productivity of other investment.", 
+    "explanatory_text": "This code allows estimating the parameters of a Panel Threshold Regression (PTR) model with one or two thresholds parameters. The model does not exactly correspond to that proposed by Hansen (1999). All the slope parameters are affected by the regime. In this model, you can consider contemporary exogenous variable. The code does not automatically introduce some lags on the threshold variable and the explicative variables. If you want to introduce such lags, you have to introduce lagged data in the form. The results display the estimated slope parameters and thresholds parameters. The F-tests F1 and/or F2 (test on the number of regimes) are also displayed. The corresponding Boostrap pvalues are displayed if the chosen number of simulations is greater than 0."
+  }, 
+  {
+    "coders": {}, 
+    "title": "Threshold Effects of the Public Capital Productivity : An International Panel Smooth Transition Approach", 
+    "journal": "University of Orl\u00e9ans (2006)", 
+    "names": [
+      "Gilbert Colletaz", 
+      "Christophe Hurlin"
+    ], 
+    "legacy_id": "66", 
+    "abstract": "Using a non linear panel data model we examine the threshold effects in the productivity of the public capital stocks for a panel of 21 OECD countries observed over 1965-2001. Using the so-called \"augmented production function\" approach, we estimate various specifications of a Panel Smooth Threshold Regression (PSTR) model recently developed by Gonzalez, Ter\u00e4svirta and Van Dijk (2004). One of our main results is the existence of strong threshold effects in the relationship between output and private and public inputs : whatever the transition mechanism specified, tests strongly reject the linearity assumption. Moreover this model allows cross-country heterogeneity and time instability of the productivity without specification of an ex-ante classification over individuals. Consequently it is posible to give estimates of productivity coefficients for both private and public capital stocks at any time and for each countries in the sample. Finally we proposed estimates of individual time varying elasticities that are much more reasonable than those previously published.", 
+    "explanatory_text": "This code allows estimating the parameters of a Panel Smooth Transition Regression (PSTR) model. In this code, the panel can be unbalanced. The user can define the number of location parameters see Gonzalez et al., 2005 for more details) and the maximum number of transition function. The code automatically determines the optimal number of transition functions, by testing the hypothesis of no remaining heterogeneity, using a 5% nominal risk. The parameters (slope parameter and location parameters of the transition function, slopes parameters in each regime for all the explicative variables\u2026) are estimated by NLS. At the end, the individual elasticities for each explicative variable are computed and stored in an excel file."
+  }, 
+  {
+    "coders": {
+      "Christophe Perignon": {
+        "affiliation": "HEC Paris", 
+        "country": "France"
+      }, 
+      "Christophe Hurlin": {
+        "affiliation": "University of Orleans", 
+        "country": "France"
+      }
+    }, 
+    "title": "Evaluating Interval Forecasts", 
+    "journal": "International Economic Review (1998)", 
+    "names": [
+      "Peter F Christoffersen"
+    ], 
+    "legacy_id": "67", 
+    "abstract": "A complete theory for evaluating interval forecasts has not been worked out to date. Most of the literature implicitly assumes homoskedastic errors even when this is clearly violated and proceed by merely testing for correct unconditional coverage. Consequently, the author sets out to build a consistent framework for conditional interval forecast evaluation, which is crucial when higher-order moment dynamics are present. The new methodology is demonstrated in an application to the exchange rate forecasting procedures advocated in risk management.", 
+    "explanatory_text": "This code computes the LR test statistics proposed by Christoffersen (1998) in the context of the backtesting of Value-at-Risk forecasts. The tests are then based on the concept of violation: a violation is said to occur when the ex-post losses are larger than the VaR defined for a given coverage rate. The user can choose to test for Unconditional Coverage (UC), Independence (IND) and/or Conditional Coverage (CC) assumptions. The two first corresponding test statistics have a chi-squared distribution with one degree of freedom and the last one a chi-squared distribution with two degrees of freedom. For more details, please read the following document."
+  }, 
+  {
+    "coders": {
+      "Christophe Perignon": {
+        "affiliation": "HEC Paris", 
+        "country": "France"
+      }, 
+      "Christophe Hurlin": {
+        "affiliation": "University of Orleans", 
+        "country": "France"
+      }
+    }, 
+    "title": "Backtesting Value-at-Risk: A Duration-Based Approach", 
+    "journal": "Journal of Financial Econometrics (2004)", 
+    "names": [
+      "Denis Pelletier", 
+      "Peter F Christoffersen"
+    ], 
+    "legacy_id": "68", 
+    "abstract": "Financial risk model evaluation or backtesting is a key part of the internal model\u2019s approach to market risk management as laid out by the Basle Committee on Banking Supervision. However, existing backtesting methods have relatively low power in realistic small sample settings. Our contribution is the exploration of new tools for backtesting based on the duration of days between the violations of the Value-at-Risk. Our Monte Carlo results show that in realistic situations, the new duration-based tests have considerably better power properties than the previously suggested tests.", 
+    "explanatory_text": "This code computes two LR duration based test statistics derived from Christoffersen and Pelletier (2004). These backtesting tests are based on the durations observed between two consecutive hits (VaR violations). The LR statistics (denoted LR_CC) corresponds to the Conditional Coverage assumption. Under the null of CC, the durations have an exponential distribution with a rate parameter equal to 1/\u03b1, where \u03b1 denotes the VaR coverage rate. The second statistic LR_IND corresponds to the independence (IND) assumption. Under the null of IND, the durations have an exponential distribution (memory-free distribution) but with a rate parameter that can different from 1/\u03b1. The first has a \u03c72(1) distribution and the second a \u03c72(2)."
+  }, 
+  {
+    "coders": {
+      "Christophe Hurlin": {
+        "affiliation": "University of Orleans", 
+        "country": "France"
+      }, 
+      "Sessi Tokpavi": {
+        "affiliation": "University of Paris Ouest, Nanterre", 
+        "country": "France"
+      }
+    }, 
+    "title": "Backtesting Value-at-Risk Accuracy: A Simple New Test", 
+    "journal": "Journal of Risk (2006)", 
+    "names": [
+      "Christophe Hurlin", 
+      "Sessi Tokpavi"
+    ], 
+    "legacy_id": "69", 
+    "abstract": "This paper proposes a new test of value-at-risk (VAR) validation. Our test exploits the idea that the sequence of VAR violations (hit function) \u2013 taking value 1 - \u03b1 if there is a violation, and -\u03b1 otherwise \u2013 for a nominal coverage rate \u03b1 verifies the properties of a martingale difference if the model used to quantify risk is adequate (Berkowitz et al., 2005). More precisely, we use the multivariate portmanteau statistic of Li and McLeod (1981), an extension to the multivariate framework of the test of Box and Pierce (1970), to jointly test the absence of autocorrelation in the vector of hit sequences for various coverage rates considered relevant for the management of extreme risks. We show that this shift to a multivariate dimension appreciably improves the power properties of the VAR validation test for reasonable sample sizes.", 
+    "explanatory_text": "This code computes the QK statistic proposed by Hurlin and Tokpavi (2006) to backtest Value-at-Risk (VaR) forecasts. The test statistic is a multivariate portmanteau statistic \u00e0 la Li and McLeod (1981) \u2013 extension to the multivariate framework of the test of Box and Pierce (1970). It jointly tests the absence of autocorrelation in the vector of hit sequences for the coverage rates considered as relevant for the management of extreme risks and chosen by the user. This code requires m VaR forecast series issued from the same model (for instance GARCH) for m coverage rates. The order of the VaRs (in column) in the matrix must correspond to the order of the coverage rates defined in the vector. The coverage rates (and the VaRs) can be sorted or unsorted."
+  }, 
+  {
+    "coders": {
+      "Christophe Perignon": {
+        "affiliation": "HEC Paris", 
+        "country": "France"
+      }, 
+      "Christophe Hurlin": {
+        "affiliation": "University of Orleans", 
+        "country": "France"
+      }, 
+      "Daniel Smith": {
+        "affiliation": "Queensland University of Technology", 
+        "country": "Australia"
+      }
+    }, 
+    "title": "A New Approach to Comparing VaR Estimation Methods", 
+    "journal": "Journal of Derivatives (2008)", 
+    "names": [
+      "Christophe Perignon", 
+      "Daniel Smith"
+    ], 
+    "legacy_id": "9", 
+    "abstract": "We develop a novel backtesting framework based on multidimensional Value-at-Risk (VaR) that focuses on the left tail of the distribution of the bank trading revenues. Our coverage test is a multivariate generalization of the unconditional test of Kupiec (Journal of Derivatives, 1995). Applying our method to actual daily bank trading revenues, we find that non-parametric VaR methods, such as GARCH-based methods or filtered Historical Simulation, work best for bank trading revenues.", 
+    "explanatory_text": "The goal of this code is to implement the Value-at-Risk (VaR) backtesting methodology of Perignon and Smith (2008). This is a multivariate unconditional test for VaR models based on several coverage probabilities. This test can be implemented with bank-level or portfolio-level profit-and-loss (P&L) data. To run our codes, you need (i) the P&L series, (ii) the VaR forecasts for different coverage rates, and (iii) the corresponding coverage rates."
+  }, 
+  {
+    "coders": {}, 
+    "title": "A Generalized Asymmetric Student-t Distribution with Application to Financial Econometrics", 
+    "journal": "Journal of Econometrics (2010)", 
+    "names": [
+      "Dongming Zhu", 
+      "John W. Galbraith"
+    ], 
+    "legacy_id": "97", 
+    "abstract": "This paper proposes a new class of asymmetric Student-t (AST) distributions, and investigates its properties, gives procedures for estimation, and indicates applications in financial econometrics. We derive analytical expressions for the cdf, quantile function, moments, and quantities useful in financial econometric applications such as the Expected Shortfall. A stochastic representation of the distribution is also given. Although the AST density does not satisfy the usual regularity conditions for maximum likelihood estimation, we establish consistency, asymptotic normality and efficiency of ML estimators and derive an explicit analytical expression for the asymptotic covariance matrix. A Monte Carlo study indicates generally good finite-sample conformity with these asymptotic properties.", 
+    "explanatory_text": "This code estimates the parameters of an AST-NGARCH(1,1) model, which is a non-linear asymmetric NGARCH process of Engle and Ng where the conditional distribution of return is the Asymmetric Student-t distribution (AST) proposed by Zhu and Galbraith."
+  }
+]
